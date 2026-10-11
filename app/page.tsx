@@ -1,5 +1,8 @@
 import { Truck, LineChart, LayoutTemplate, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import AndrewCursor from "../components/AndrewCursor";
+import GuestCursor from "../components/GuestCursor";
+import DynamicYear from "../components/DynamicYear";
 
 export default function Home() {
   return (
@@ -16,18 +19,39 @@ export default function Home() {
         </div>
       </nav>
 
+      <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
-        <section className="max-w-3xl mb-32">
+        <section className="relative max-w-3xl mb-32">
+          <AndrewCursor />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">
-            Andrew Leevey - Lead Product Designer
+            Andrew Leevey <br className="hidden sm:block" />
+            <span className="text-3xl sm:text-4xl md:text-5xl text-slate-600 block mt-2">Lead Product Designer</span>
           </h1>
           <h2 className="text-2xl sm:text-3xl font-medium text-slate-700 mb-6 leading-snug">
             Bridging the gap between Service Design and Commercial Strategy.
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl">
+          <p className="max-w-2xl text-lg sm:text-xl text-slate-600 leading-relaxed">
             I am a Lead Product Designer who operates as a commercial advisor. I focus on translating complex business logic into simple, frictionless user journeys that directly boost conversion and retention.
           </p>
+        </section>
+
+        {/* Key Skills Section */}
+        <section className="mb-32">
+          <div className="flex items-center justify-between mb-12">
+            <h3 className="text-3xl font-bold tracking-tight text-slate-900">Key Skills</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-yellow-100 aspect-square p-8 rounded shadow-md transform -rotate-2 hover:rotate-0 transition-transform flex items-center justify-center text-center">
+              <h4 className="text-2xl font-bold text-slate-800 font-handwriting">Flow Mapping</h4>
+            </div>
+            <div className="bg-blue-100 aspect-square p-8 rounded shadow-md transform rotate-1 hover:rotate-0 transition-transform flex items-center justify-center text-center">
+              <h4 className="text-2xl font-bold text-slate-800 font-handwriting">Facilitation</h4>
+            </div>
+            <div className="bg-pink-100 aspect-square p-8 rounded shadow-md transform -rotate-1 hover:rotate-0 transition-transform flex items-center justify-center text-center">
+              <h4 className="text-2xl font-bold text-slate-800 font-handwriting">Problem Framing</h4>
+            </div>
+          </div>
         </section>
 
         {/* Case Studies Section */}
@@ -84,7 +108,7 @@ export default function Home() {
 
       <footer className="border-t border-slate-200 mt-20">
         <div className="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-slate-500">
-          <p>© 2024 Andrew Leevey. All rights reserved.</p>
+          <DynamicYear />
         </div>
       </footer>
     </div>
