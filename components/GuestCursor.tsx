@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const COLORS = ["#22c55e", "#a855f7", "#f97316"]; // green-500, purple-500, orange-500
 
 export default function GuestCursor() {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const cursorRef = useRef<HTMLDivElement>(null);
   const [color, setColor] = useState("#22c55e");
   const [mounted, setMounted] = useState(false);
 
@@ -18,7 +18,9 @@ export default function GuestCursor() {
     setMounted(true);
 
     const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      }
     };
 
     window.addEventListener("mousemove", updatePosition);
@@ -32,9 +34,10 @@ export default function GuestCursor() {
 
   return (
     <div
+      ref={cursorRef}
       className="fixed z-50 pointer-events-none transition-transform duration-75 ease-out"
       style={{
-        transform: `translate(${position.x}px, ${position.y}px)`,
+        transform: `translate(-100px, -100px)`,
         left: 0,
         top: 0,
       }}

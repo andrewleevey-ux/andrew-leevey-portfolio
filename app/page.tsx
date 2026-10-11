@@ -6,17 +6,12 @@ import DynamicYear from "../components/DynamicYear";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-slate-200">
-      {/* Navigation */}
-      <nav className="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
-        <Link href="/" className="text-xl font-semibold tracking-tight text-slate-900">
-          AL.
-        </Link>
-        <div className="flex gap-6 text-sm font-medium text-slate-600">
-          <Link href="#work" className="hover:text-slate-900 transition-colors">Work</Link>
-          <Link href="#cv" className="hover:text-slate-900 transition-colors">CV</Link>
-          <Link href="#about" className="hover:text-slate-900 transition-colors">About</Link>
-        </div>
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-slate-200 dot-grid">
+      {/* Floating Navigation */}
+      <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-white/70 backdrop-blur-md rounded-full shadow-lg border border-white/20 px-8 py-4 flex gap-6 z-50 text-sm font-medium text-slate-700">
+        <Link href="#work" className="hover:text-slate-900 transition-colors">Work</Link>
+        <Link href="#cv" className="hover:text-slate-900 transition-colors">CV</Link>
+        <Link href="#about" className="hover:text-slate-900 transition-colors">About</Link>
       </nav>
 
       <GuestCursor />
@@ -24,9 +19,9 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative max-w-3xl mb-32">
           <AndrewCursor />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">
-            Andrew Leevey <br className="hidden sm:block" />
-            <span className="text-3xl sm:text-4xl md:text-5xl text-slate-600 block mt-2">Lead Product Designer</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+            <span className="font-handwriting text-blue-600 text-6xl sm:text-7xl md:text-8xl">Andrew Leevey</span> <br className="hidden sm:block" />
+            <span className="text-3xl sm:text-4xl md:text-5xl text-slate-900 block mt-4">Lead Product Designer</span>
           </h1>
           <h2 className="text-2xl sm:text-3xl font-medium text-slate-700 mb-6 leading-snug">
             Bridging the gap between Service Design and Commercial Strategy.
@@ -39,7 +34,7 @@ export default function Home() {
         {/* Key Skills Section */}
         <section className="mb-32">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl font-bold tracking-tight text-slate-900">Key Skills</h3>
+            <h3 className="text-4xl sm:text-5xl font-handwriting text-slate-900">Key Skills</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-yellow-100 aspect-square p-8 rounded shadow-md transform -rotate-2 hover:rotate-0 transition-transform flex items-center justify-center text-center">
@@ -57,7 +52,7 @@ export default function Home() {
         {/* Case Studies Section */}
         <section id="work">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl font-bold tracking-tight text-slate-900">Case Studies</h3>
+            <h3 className="text-4xl sm:text-5xl font-handwriting text-slate-900">Case Studies</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

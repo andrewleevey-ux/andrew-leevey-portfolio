@@ -17,8 +17,8 @@ export default function AndrewCursor() {
       className="absolute z-10 pointer-events-none"
       style={{
         animation: "wander 20s ease-in-out infinite alternate",
-        top: "20%",
-        left: "10%",
+        top: "-20px",
+        left: "80%",
       }}
     >
       <div className="relative">
@@ -50,25 +50,25 @@ export default function AndrewCursor() {
             transform: translate(0, 0);
           }
           20% {
-            transform: translate(150px, 40px);
+            transform: translate(-100px, 80px);
           }
           25% {
-            transform: translate(150px, 40px); /* Pause */
+            transform: translate(-100px, 80px); /* Pause */
           }
           45% {
-            transform: translate(300px, -20px);
+            transform: translate(-250px, 40px);
           }
           50% {
-            transform: translate(300px, -20px); /* Pause */
+            transform: translate(-250px, 40px); /* Pause */
           }
           70% {
-            transform: translate(80px, 120px);
+            transform: translate(-50px, 150px);
           }
           75% {
-            transform: translate(80px, 120px); /* Pause */
+            transform: translate(-50px, 150px); /* Pause */
           }
           100% {
-            transform: translate(400px, 80px);
+            transform: translate(150px, 120px);
           }
         }
       `}</style>
