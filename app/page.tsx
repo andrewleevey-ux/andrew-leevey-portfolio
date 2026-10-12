@@ -63,12 +63,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all flex flex-col h-full">
-              <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
+            <div className="group bg-yellow-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square -rotate-2">
+              <div className="w-12 h-12 bg-yellow-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                 <Truck size={24} />
               </div>
               <h4 className="text-xl font-semibold text-slate-900 mb-3">2-Person Delivery</h4>
-              <p className="text-slate-600 leading-relaxed flex-grow">
+              <p className="text-slate-700 leading-relaxed flex-grow">
                 Mapping the end-to-end journey connecting the digital checkout to physical door-drop logistics.
               </p>
               <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
@@ -77,12 +77,12 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all flex flex-col h-full">
-              <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
+            <div className="group bg-blue-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square rotate-1">
+              <div className="w-12 h-12 bg-blue-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                 <LineChart size={24} />
               </div>
               <h4 className="text-xl font-semibold text-slate-900 mb-3">CRO Strategy</h4>
-              <p className="text-slate-600 leading-relaxed flex-grow">
+              <p className="text-slate-700 leading-relaxed flex-grow">
                 Running rapid, hypothesis-driven testing cycles to de-risk delivery and lift online revenue.
               </p>
               <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
@@ -91,12 +91,12 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all flex flex-col h-full">
-              <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
+            <div className="group bg-pink-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square rotate-2">
+              <div className="w-12 h-12 bg-pink-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                 <LayoutTemplate size={24} />
               </div>
               <h4 className="text-xl font-semibold text-slate-900 mb-3">UX Problem Framing</h4>
-              <p className="text-slate-600 leading-relaxed flex-grow">
+              <p className="text-slate-700 leading-relaxed flex-grow">
                 Building a bespoke internal framework that standardised product discovery and cut friction between design and engineering.
               </p>
               <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
