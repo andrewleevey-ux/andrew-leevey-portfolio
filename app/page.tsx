@@ -102,14 +102,14 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-12">
             {/* Deep Dive Card 1 */}
-            <div className="flex flex-col md:flex-row gap-8 bg-white p-8 shadow-md border border-slate-200 rounded-3xl items-stretch">
-              <div className="w-full md:w-1/2">
-                <div className="bg-blue-50 rounded-2xl h-full min-h-[250px] w-full flex items-center justify-center text-blue-300">
+            <div className="flex flex-col md:flex-row bg-white shadow-md border border-slate-200 rounded-3xl items-stretch overflow-hidden">
+              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0">
+                <div className="bg-emerald-400 rounded-tr-3xl rounded-tl-none rounded-b-none h-full min-h-[250px] w-full flex items-center justify-center text-white">
                   <LayoutTemplate size={48} />
                 </div>
               </div>
-              <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Strategic Product Vision</h3>
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
+                <h3 className="font-bold text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Strategic Product Vision</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Aligning business objectives with user needs through comprehensive research, stakeholder workshops, and clear, actionable product roadmaps that drive growth.
                 </p>
@@ -120,14 +120,14 @@ export default function Home() {
             </div>
 
             {/* Deep Dive Card 2 */}
-            <div className="flex flex-col md:flex-row gap-8 bg-white p-8 shadow-md border border-slate-200 rounded-3xl items-stretch">
-              <div className="w-full md:w-1/2">
-                <div className="bg-blue-50 rounded-2xl h-full min-h-[250px] w-full flex items-center justify-center text-blue-300">
+            <div className="flex flex-col md:flex-row bg-white shadow-md border border-slate-200 rounded-3xl items-stretch overflow-hidden">
+              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0">
+                <div className="bg-blue-500 rounded-tr-3xl rounded-tl-none rounded-b-none h-full min-h-[250px] w-full flex items-center justify-center text-white">
                   <LineChart size={48} />
                 </div>
               </div>
-              <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Data-Driven Design</h3>
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
+                <h3 className="font-bold text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Data-Driven Design</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Utilizing analytics, A/B testing, and user feedback loops to continuously iterate and refine digital experiences, ensuring measurable improvements in conversion rates.
                 </p>
@@ -138,14 +138,14 @@ export default function Home() {
             </div>
 
             {/* Deep Dive Card 3 */}
-            <div className="flex flex-col md:flex-row gap-8 bg-white p-8 shadow-md border border-slate-200 rounded-3xl items-stretch">
-              <div className="w-full md:w-1/2">
-                <div className="bg-blue-50 rounded-2xl h-full min-h-[250px] w-full flex items-center justify-center text-blue-300">
+            <div className="flex flex-col md:flex-row bg-white shadow-md border border-slate-200 rounded-3xl items-stretch overflow-hidden">
+              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0">
+                <div className="bg-pink-500 rounded-tr-3xl rounded-tl-none rounded-b-none h-full min-h-[250px] w-full flex items-center justify-center text-white">
                   <Truck size={48} />
                 </div>
               </div>
-              <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Service Ecosystems</h3>
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
+                <h3 className="font-bold text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Service Ecosystems</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Mapping out end-to-end service blueprints to identify friction points across both digital touchpoints and operational processes, delivering a unified customer journey.
                 </p>

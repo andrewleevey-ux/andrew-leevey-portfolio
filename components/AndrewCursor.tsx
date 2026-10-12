@@ -50,25 +50,25 @@ export default function AndrewCursor() {
             transform: translate(0, 0);
           }
           20% {
-            transform: translate(-100px, 80px);
+            transform: translate(-100px, 200px);
           }
           25% {
-            transform: translate(-100px, 80px); /* Pause */
+            transform: translate(-100px, 200px); /* Pause */
           }
           45% {
-            transform: translate(-250px, 40px);
+            transform: translate(-250px, 500px);
           }
           50% {
-            transform: translate(-250px, 40px); /* Pause */
+            transform: translate(-250px, 500px); /* Pause */
           }
           70% {
-            transform: translate(-50px, 150px);
+            transform: translate(-50px, 750px);
           }
           75% {
-            transform: translate(-50px, 150px); /* Pause */
+            transform: translate(-50px, 750px); /* Pause */
           }
           100% {
-            transform: translate(150px, 120px);
+            transform: translate(150px, 600px);
           }
         }
       `}</style>
