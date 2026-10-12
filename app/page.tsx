@@ -40,7 +40,7 @@ export default function Home() {
         {/* Key Skills Section */}
         <section className="mb-32">
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lean Product Process</h2>
+            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lean Product Process</h2>
           </div>
           <div className="relative flex flex-col md:flex-row items-center justify-center gap-4">
             {/* Whiteboard Annotations */}
@@ -98,7 +98,7 @@ export default function Home() {
         {/* Deep Dive Section */}
         <section className="max-w-6xl mx-auto mb-32">
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Case Studies</h2>
+            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Case Studies</h2>
           </div>
           <div className="flex flex-col gap-12">
             {/* Deep Dive Card 1 */}
@@ -109,7 +109,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
-                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Strategic Product Vision</h3>
+                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Strategic Product Vision</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Aligning business objectives with user needs through comprehensive research, stakeholder workshops, and clear, actionable product roadmaps that drive growth.
                 </p>
@@ -127,7 +127,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
-                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Data-Driven Design</h3>
+                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Data-Driven Design</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Utilizing analytics, A/B testing, and user feedback loops to continuously iterate and refine digital experiences, ensuring measurable improvements in conversion rates.
                 </p>
@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
-                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Service Ecosystems</h3>
+                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Service Ecosystems</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Mapping out end-to-end service blueprints to identify friction points across both digital touchpoints and operational processes, delivering a unified customer journey.
                 </p>
@@ -160,7 +160,7 @@ export default function Home() {
         {/* Testimonials Section */}
         <section className="mb-32 overflow-hidden">
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
+            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
           </div>
 
           <div
@@ -219,7 +219,7 @@ export default function Home() {
         {/* Case Studies Section */}
         <section id="work">
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
+            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
