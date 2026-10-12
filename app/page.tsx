@@ -6,7 +6,7 @@ import DynamicYear from "../components/DynamicYear";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-slate-200 dot-grid pb-24">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
       {/* Floating Navigation */}
       <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-6 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-slate-200 z-50">
         <Link href="#work" className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
@@ -39,8 +39,8 @@ export default function Home() {
 
         {/* Key Skills Section */}
         <section className="mb-32">
-          <div className="flex items-center justify-between mb-12">
-            <h3 className="text-4xl sm:text-5xl font-handwriting text-slate-900">Key Skills</h3>
+          <div className="flex items-center justify-center mb-12">
+            <h3 className="font-sans text-3xl md:text-4xl font-bold text-slate-900 tracking-tight text-center w-full">Key Skills</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-yellow-100 aspect-square p-8 rounded shadow-md transform -rotate-2 hover:rotate-0 transition-transform flex items-center justify-center text-center">
@@ -55,10 +55,131 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Deep Dive Section */}
+        <section className="max-w-6xl mx-auto mb-32">
+          <div className="flex items-center justify-center mb-12">
+            <h3 className="font-sans text-3xl md:text-4xl font-bold text-slate-900 tracking-tight text-center w-full">Case Studies</h3>
+          </div>
+          <div className="flex flex-col gap-12">
+            {/* Deep Dive Card 1 */}
+            <div className="flex flex-col md:flex-row gap-8 bg-white p-8 shadow-md border border-slate-200 rounded-3xl items-stretch">
+              <div className="w-full md:w-1/2">
+                <div className="bg-blue-50 rounded-2xl h-full min-h-[250px] w-full flex items-center justify-center text-blue-300">
+                  <LayoutTemplate size={48} />
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Strategic Product Vision</h3>
+                <p className="text-slate-600 mb-6 flex-grow">
+                  Aligning business objectives with user needs through comprehensive research, stakeholder workshops, and clear, actionable product roadmaps that drive growth.
+                </p>
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group">
+                  Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+                </div>
+              </div>
+            </div>
+
+            {/* Deep Dive Card 2 */}
+            <div className="flex flex-col md:flex-row gap-8 bg-white p-8 shadow-md border border-slate-200 rounded-3xl items-stretch">
+              <div className="w-full md:w-1/2">
+                <div className="bg-blue-50 rounded-2xl h-full min-h-[250px] w-full flex items-center justify-center text-blue-300">
+                  <LineChart size={48} />
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Data-Driven Design</h3>
+                <p className="text-slate-600 mb-6 flex-grow">
+                  Utilizing analytics, A/B testing, and user feedback loops to continuously iterate and refine digital experiences, ensuring measurable improvements in conversion rates.
+                </p>
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group">
+                  Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+                </div>
+              </div>
+            </div>
+
+            {/* Deep Dive Card 3 */}
+            <div className="flex flex-col md:flex-row gap-8 bg-white p-8 shadow-md border border-slate-200 rounded-3xl items-stretch">
+              <div className="w-full md:w-1/2">
+                <div className="bg-blue-50 rounded-2xl h-full min-h-[250px] w-full flex items-center justify-center text-blue-300">
+                  <Truck size={48} />
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Service Ecosystems</h3>
+                <p className="text-slate-600 mb-6 flex-grow">
+                  Mapping out end-to-end service blueprints to identify friction points across both digital touchpoints and operational processes, delivering a unified customer journey.
+                </p>
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group">
+                  Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="mb-32 overflow-hidden">
+          <div className="flex items-center justify-center mb-12">
+            <h3 className="font-sans text-3xl md:text-4xl font-bold text-slate-900 tracking-tight text-center w-full">What people say</h3>
+          </div>
+
+          <div
+            className="relative w-full overflow-hidden flex items-center py-4"
+            style={{
+              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+            }}
+          >
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-8 pr-8">
+              {/* Duplicate array of testimonials for infinite scroll effect */}
+              {[1, 2].map((setIndex) => (
+                <div key={setIndex} className="flex gap-8">
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                      &quot;Andrew transformed our checkout flow, increasing conversion by 15% in just two weeks. His ability to connect user needs to business goals is unparalleled.&quot;
+                    </p>
+                    <div>
+                      <p className="font-semibold text-slate-900">Sarah Jenkins</p>
+                      <p className="text-sm text-slate-500">VP of Product, RetailCo</p>
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                      &quot;He doesn&apos;t just design screens; he designs entire service ecosystems. Our operational efficiency skyrocketed after his strategic deep dive.&quot;
+                    </p>
+                    <div>
+                      <p className="font-semibold text-slate-900">Marcus Wright</p>
+                      <p className="text-sm text-slate-500">COO, LogisticsPlus</p>
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                      &quot;A rare hybrid of creative design thinking and sharp commercial acumen. Andrew is the advisory partner every leadership team needs.&quot;
+                    </p>
+                    <div>
+                      <p className="font-semibold text-slate-900">Elena Rostova</p>
+                      <p className="text-sm text-slate-500">Founder & CEO, TechStart</p>
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                      &quot;His facilitation skills brought our engineering and design teams together like never before. The friction is gone, and delivery is faster.&quot;
+                    </p>
+                    <div>
+                      <p className="font-semibold text-slate-900">David Chen</p>
+                      <p className="text-sm text-slate-500">CTO, FinServe</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Case Studies Section */}
         <section id="work">
-          <div className="flex items-center justify-between mb-12">
-            <h3 className="text-4xl sm:text-5xl font-handwriting text-slate-900">Case Studies</h3>
+          <div className="flex items-center justify-center mb-12">
+            <h3 className="font-sans text-3xl md:text-4xl font-bold text-slate-900 tracking-tight text-center w-full">Placeholder Title</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
