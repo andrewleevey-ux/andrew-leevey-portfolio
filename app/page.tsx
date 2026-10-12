@@ -40,17 +40,57 @@ export default function Home() {
         {/* Key Skills Section */}
         <section className="mb-32">
           <div className="flex items-center justify-center mb-12">
-            <h3 className="font-sans text-3xl md:text-4xl font-bold text-slate-900 tracking-tight text-center w-full">Key Skills</h3>
+            <h3 className="font-sans text-3xl md:text-4xl font-bold text-slate-900 tracking-tight text-center w-full">Lean Product Process</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-yellow-100 aspect-square p-8 rounded shadow-md transform -rotate-2 hover:rotate-0 transition-transform flex items-center justify-center text-center">
-              <h4 className="text-2xl font-bold text-slate-800 font-handwriting">Flow Mapping</h4>
+          <div className="relative flex flex-col md:flex-row items-center justify-center gap-4">
+            {/* Whiteboard Annotations */}
+            <div className="absolute -top-8 left-0 md:-left-8 text-red-500 font-handwriting text-2xl transform -rotate-6 hidden sm:block">Start here</div>
+            <div className="absolute -bottom-10 right-0 md:-right-4 text-blue-500 font-handwriting text-2xl transform rotate-3 hidden sm:block">Validate first!</div>
+
+            {/* Node 1 */}
+            <div className="bg-white border-2 border-blue-600 rounded-xl shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
+              <h4 className="font-bold text-slate-900 text-center">Problem Framing</h4>
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Workshop Facilitation</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Discovery</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Journey Mapping</span>
+              </div>
             </div>
-            <div className="bg-blue-100 aspect-square p-8 rounded shadow-md transform rotate-1 hover:rotate-0 transition-transform flex items-center justify-center text-center">
-              <h4 className="text-2xl font-bold text-slate-800 font-handwriting">Facilitation</h4>
+
+            <ArrowRight className="text-slate-400 rotate-90 md:rotate-0 flex-shrink-0" size={24} />
+
+            {/* Node 2 */}
+            <div className="bg-white border-2 border-blue-600 rounded-xl shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
+              <h4 className="font-bold text-slate-900 text-center">Service Architecture</h4>
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Flow Mapping</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Logic Definition</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Blueprinting</span>
+              </div>
             </div>
-            <div className="bg-pink-100 aspect-square p-8 rounded shadow-md transform -rotate-1 hover:rotate-0 transition-transform flex items-center justify-center text-center">
-              <h4 className="text-2xl font-bold text-slate-800 font-handwriting">Problem Framing</h4>
+
+            <ArrowRight className="text-slate-400 rotate-90 md:rotate-0 flex-shrink-0" size={24} />
+
+            {/* Node 3 */}
+            <div className="bg-white border-2 border-blue-600 rounded-xl shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
+              <h4 className="font-bold text-slate-900 text-center">Interaction Design</h4>
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Rapid Prototyping</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Wireframing</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">UX Design</span>
+              </div>
+            </div>
+
+            <ArrowRight className="text-slate-400 rotate-90 md:rotate-0 flex-shrink-0" size={24} />
+
+            {/* Node 4 */}
+            <div className="bg-white border-2 border-blue-600 rounded-[2rem] shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
+              <h4 className="font-bold text-slate-900 text-center">Commercial Iteration</h4>
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">CRO</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">A/B Testing</span>
+                <span className="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-full">Analytics</span>
+              </div>
             </div>
           </div>
         </section>
