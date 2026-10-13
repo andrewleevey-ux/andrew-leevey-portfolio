@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Truck, LineChart, LayoutTemplate, ArrowRight, Briefcase, FileText, User, Lightbulb, GitBranch, PenTool } from "lucide-react";
+import { Truck, LineChart, LayoutTemplate, ArrowRight, Briefcase, FileText, User, Lightbulb, GitBranch, PenTool, Users } from "lucide-react";
 import Link from "next/link";
 import AndrewCursor from "../components/AndrewCursor";
 import GuestCursor from "../components/GuestCursor";
@@ -183,41 +183,117 @@ export default function Home() {
               {/* Duplicate array of testimonials for infinite scroll effect */}
               {[1, 2].map((setIndex) => (
                 <div key={setIndex} className="flex gap-8">
-                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div className="border-b border-slate-100 pb-3 mb-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Users className="text-blue-500 w-4 h-4" />
+                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                      </div>
+                      <div className="text-xs text-slate-500">
+                        Posted in Praise 🙌 | The Very Group
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-slate-100 rounded-full overflow-hidden flex-shrink-0"></div>
+                        <div>
+                          <div className="font-bold text-slate-900 text-sm">Lee Somers</div>
+                          <div className="text-xs text-slate-500">Product Manager @ The Very Group</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-slate-400 self-start mt-1">Seen by team</div>
+                    </div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-purple-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Praise</span>
+                      <span className="text-xs text-slate-600 font-medium">Praised Andrew Leevey</span>
+                    </div>
+                    <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;Andrew transformed our checkout flow, increasing conversion by 15% in just two weeks. His ability to connect user needs to business goals is unparalleled.&quot;
                     </p>
-                    <div>
-                      <p className="font-semibold text-slate-900">Sarah Jenkins</p>
-                      <p className="text-sm text-slate-500">VP of Product, RetailCo</p>
-                    </div>
                   </div>
-                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div className="border-b border-slate-100 pb-3 mb-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Users className="text-blue-500 w-4 h-4" />
+                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                      </div>
+                      <div className="text-xs text-slate-500">
+                        Posted in Praise 🙌 | The Very Group
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-slate-100 rounded-full overflow-hidden flex-shrink-0"></div>
+                        <div>
+                          <div className="font-bold text-slate-900 text-sm">Marcus Wright</div>
+                          <div className="text-xs text-slate-500">COO, LogisticsPlus</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-slate-400 self-start mt-1">Seen by team</div>
+                    </div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-purple-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Praise</span>
+                      <span className="text-xs text-slate-600 font-medium">Praised Andrew Leevey</span>
+                    </div>
+                    <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;He doesn&apos;t just design screens; he designs entire service ecosystems. Our operational efficiency skyrocketed after his strategic deep dive.&quot;
                     </p>
-                    <div>
-                      <p className="font-semibold text-slate-900">Marcus Wright</p>
-                      <p className="text-sm text-slate-500">COO, LogisticsPlus</p>
-                    </div>
                   </div>
-                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div className="border-b border-slate-100 pb-3 mb-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Users className="text-blue-500 w-4 h-4" />
+                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                      </div>
+                      <div className="text-xs text-slate-500">
+                        Posted in Praise 🙌 | The Very Group
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-slate-100 rounded-full overflow-hidden flex-shrink-0"></div>
+                        <div>
+                          <div className="font-bold text-slate-900 text-sm">Elena Rostova</div>
+                          <div className="text-xs text-slate-500">Founder & CEO, TechStart</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-slate-400 self-start mt-1">Seen by team</div>
+                    </div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-purple-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Praise</span>
+                      <span className="text-xs text-slate-600 font-medium">Praised Andrew Leevey</span>
+                    </div>
+                    <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;A rare hybrid of creative design thinking and sharp commercial acumen. Andrew is the advisory partner every leadership team needs.&quot;
                     </p>
-                    <div>
-                      <p className="font-semibold text-slate-900">Elena Rostova</p>
-                      <p className="text-sm text-slate-500">Founder & CEO, TechStart</p>
-                    </div>
                   </div>
-                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                    <p className="text-slate-600 mb-6 italic leading-relaxed">
+                  <div className="flex-shrink-0 w-80 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div className="border-b border-slate-100 pb-3 mb-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Users className="text-blue-500 w-4 h-4" />
+                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                      </div>
+                      <div className="text-xs text-slate-500">
+                        Posted in Praise 🙌 | The Very Group
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-slate-100 rounded-full overflow-hidden flex-shrink-0"></div>
+                        <div>
+                          <div className="font-bold text-slate-900 text-sm">David Chen</div>
+                          <div className="text-xs text-slate-500">CTO, FinServe</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-slate-400 self-start mt-1">Seen by team</div>
+                    </div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="bg-purple-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Praise</span>
+                      <span className="text-xs text-slate-600 font-medium">Praised Andrew Leevey</span>
+                    </div>
+                    <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;His facilitation skills brought our engineering and design teams together like never before. The friction is gone, and delivery is faster.&quot;
                     </p>
-                    <div>
-                      <p className="font-semibold text-slate-900">David Chen</p>
-                      <p className="text-sm text-slate-500">CTO, FinServe</p>
-                    </div>
                   </div>
                 </div>
               ))}
