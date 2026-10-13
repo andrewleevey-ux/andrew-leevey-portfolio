@@ -1,10 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import { Truck, LineChart, LayoutTemplate, ArrowRight, Briefcase, FileText, User, Lightbulb, GitBranch, PenTool } from "lucide-react";
 import Link from "next/link";
 import AndrewCursor from "../components/AndrewCursor";
 import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
+import CaseStudyModal from "../components/CaseStudyModal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
       {/* Floating Navigation */}
@@ -117,7 +122,7 @@ export default function Home() {
                 <p className="text-slate-600 mb-6 flex-grow">
                   Aligning business objectives with user needs through comprehensive research, stakeholder workshops, and clear, actionable product roadmaps that drive growth.
                 </p>
-                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group">
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setIsModalOpen(true)}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -135,7 +140,7 @@ export default function Home() {
                 <p className="text-slate-600 mb-6 flex-grow">
                   Utilizing analytics, A/B testing, and user feedback loops to continuously iterate and refine digital experiences, ensuring measurable improvements in conversion rates.
                 </p>
-                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group">
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setIsModalOpen(true)}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -153,7 +158,7 @@ export default function Home() {
                 <p className="text-slate-600 mb-6 flex-grow">
                   Mapping out end-to-end service blueprints to identify friction points across both digital touchpoints and operational processes, delivering a unified customer journey.
                 </p>
-                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group">
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setIsModalOpen(true)}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -270,6 +275,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </main>
 
       <footer className="border-t border-slate-200 mt-20">

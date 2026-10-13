@@ -35,7 +35,7 @@ export default function GuestCursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed z-50 pointer-events-none transition-transform duration-75 ease-out"
+      className="fixed z-[9999] pointer-events-none transition-transform duration-75 ease-out"
       style={{
         transform: `translate(-100px, -100px)`,
         left: 0,

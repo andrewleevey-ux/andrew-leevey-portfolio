@@ -14,7 +14,7 @@ export default function AndrewCursor() {
 
   return (
     <div
-      className="absolute z-10 pointer-events-none"
+      className="absolute z-[9999] pointer-events-none"
       style={{
         animation: "wander 20s ease-in-out infinite alternate",
         top: "-20px",
