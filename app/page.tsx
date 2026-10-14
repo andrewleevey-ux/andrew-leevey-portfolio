@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Truck, LineChart, LayoutTemplate, ArrowRight, Briefcase, FileText, User, Lightbulb, GitBranch, PenTool, Users } from "lucide-react";
-import Link from "next/link";
+import { Truck, LineChart, LayoutTemplate, ArrowRight, Lightbulb, GitBranch, PenTool, Users } from "lucide-react";
 import AndrewCursor from "../components/AndrewCursor";
 import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
@@ -12,19 +11,6 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
-      {/* Floating Navigation */}
-      <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-6 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-slate-200 z-50">
-        <Link href="#work" className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-          <Briefcase size={18} /> Work
-        </Link>
-        <Link href="#cv" className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-          <FileText size={18} /> CV
-        </Link>
-        <Link href="#about" className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-          <User size={18} /> About
-        </Link>
-      </nav>
-
       <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
