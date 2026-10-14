@@ -184,89 +184,61 @@ export default function Home() {
               {[1, 2].map((setIndex) => (
                 <div key={setIndex} className="flex gap-8">
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
-                    <div className="border-b border-slate-100 pb-3 mb-4">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                        <Users className="text-blue-500 w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 text-sm">Lee Somers</div>
+                        <div className="text-xs text-slate-500">Product Manager @ The Very Group</div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                          <Users className="text-blue-500 w-5 h-5" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-sm">Lee Somers</div>
-                          <div className="text-xs text-slate-500">Product Manager @ The Very Group</div>
-                          <div className="text-xs text-slate-600 font-medium mt-0.5">Praised Andrew Leevey</div>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;Andrew transformed our checkout flow, increasing conversion by 15% in just two weeks. His ability to connect user needs to business goals is unparalleled.&quot;
                     </p>
                   </div>
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
-                    <div className="border-b border-slate-100 pb-3 mb-4">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                        <Users className="text-blue-500 w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 text-sm">Marcus Wright</div>
+                        <div className="text-xs text-slate-500">COO, LogisticsPlus</div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                          <Users className="text-blue-500 w-5 h-5" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-sm">Marcus Wright</div>
-                          <div className="text-xs text-slate-500">COO, LogisticsPlus</div>
-                          <div className="text-xs text-slate-600 font-medium mt-0.5">Praised Andrew Leevey</div>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;He doesn&apos;t just design screens; he designs entire service ecosystems. Our operational efficiency skyrocketed after his strategic deep dive.&quot;
                     </p>
                   </div>
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
-                    <div className="border-b border-slate-100 pb-3 mb-4">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                        <Users className="text-blue-500 w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 text-sm">Elena Rostova</div>
+                        <div className="text-xs text-slate-500">Founder & CEO, TechStart</div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                          <Users className="text-blue-500 w-5 h-5" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-sm">Elena Rostova</div>
-                          <div className="text-xs text-slate-500">Founder & CEO, TechStart</div>
-                          <div className="text-xs text-slate-600 font-medium mt-0.5">Praised Andrew Leevey</div>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;A rare hybrid of creative design thinking and sharp commercial acumen. Andrew is the advisory partner every leadership team needs.&quot;
                     </p>
                   </div>
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
-                    <div className="border-b border-slate-100 pb-3 mb-4">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-semibold text-slate-900 text-sm">Viva Engage</span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                        <Users className="text-blue-500 w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 text-sm">David Chen</div>
+                        <div className="text-xs text-slate-500">CTO, FinServe</div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                          <Users className="text-blue-500 w-5 h-5" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-sm">David Chen</div>
-                          <div className="text-xs text-slate-500">CTO, FinServe</div>
-                          <div className="text-xs text-slate-600 font-medium mt-0.5">Praised Andrew Leevey</div>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
                       &quot;His facilitation skills brought our engineering and design teams together like never before. The friction is gone, and delivery is faster.&quot;
                     </p>
