@@ -69,6 +69,7 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
           <div className="flex gap-4 mt-8 pt-6 border-t border-slate-100">
             <Link
               href="/case-studies/strategic-vision"
+              onClick={onClose}
               className="bg-slate-900 text-white rounded-full px-6 py-3 font-medium hover:bg-slate-800 transition-colors"
             >
               See full case study
