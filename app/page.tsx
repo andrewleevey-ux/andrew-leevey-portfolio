@@ -15,7 +15,7 @@ export default function Home() {
       <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
-        <section className="relative max-w-3xl mb-32">
+        <section className="relative w-full mb-32">
           <AndrewCursor />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
             <span className="font-handwriting text-blue-600 text-6xl sm:text-7xl md:text-8xl">Andrew Leevey</span> <br className="hidden sm:block" />
