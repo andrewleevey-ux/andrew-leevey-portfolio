@@ -25,7 +25,7 @@ export default function Home() {
             Bridging the gap between Service Design and Commercial Strategy.
           </h2>
           <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl w-full">
-            <Image src="/lightbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
+            <Image src="/images/lightbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
             <div>
               <h3 className="text-3xl font-semibold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">About me...</h3>
               <p className="text-slate-800 text-base leading-relaxed">

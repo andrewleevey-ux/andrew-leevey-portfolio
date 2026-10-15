@@ -33,7 +33,7 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
         {/* Hero Image */}
         <div className="relative w-full h-64 sm:h-80 md:h-96">
           <Image
-            src="/06-uxdoc-full.jpg"
+            src="/images/06-uxdoc-full.jpg"
             alt="Case Study Document"
             fill
             className="object-cover rounded-t-3xl"
