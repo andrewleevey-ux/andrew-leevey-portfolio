@@ -15,7 +15,7 @@ export default function Home() {
       <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
-        <section className="relative max-w-3xl mb-32">
+        <section className="relative w-full mb-32">
           <AndrewCursor />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
             <span className="font-handwriting text-blue-600 text-6xl sm:text-7xl md:text-8xl">Andrew Leevey</span> <br className="hidden sm:block" />
@@ -24,11 +24,11 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-medium text-slate-700 mb-6" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
             Bridging the gap between Service Design and Commercial Strategy.
           </h2>
-          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-amber-50 border-2 border-amber-300 rounded-3xl max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl w-full">
             <Image src="/lightbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
             <div>
-              <h3 className="text-3xl font-semibold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">Hello world!</h3>
-              <p className="text-slate-800 text-lg leading-relaxed">
+              <h3 className="text-3xl font-semibold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">About me...</h3>
+              <p className="text-slate-800 text-base leading-relaxed">
                 I am a lead level product Designer who operates as a commercial advisor. I focus on translating complex business logic into simple, frictionless user journeys that directly improve conversion and retention.
               </p>
             </div>
