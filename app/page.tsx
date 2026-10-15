@@ -10,6 +10,7 @@ import CaseStudyModal from "../components/CaseStudyModal";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMarqueePaused, setIsMarqueePaused] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
       <GuestCursor />
@@ -172,7 +173,12 @@ export default function Home() {
               WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
             }}
           >
-            <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-8 pr-8">
+            <div
+              className={`flex w-max animate-marquee hover:[animation-play-state:paused] gap-8 pr-8 ${isMarqueePaused ? '[animation-play-state:paused]' : ''}`}
+              onTouchStart={() => setIsMarqueePaused(true)}
+              onTouchEnd={() => setIsMarqueePaused(false)}
+              onTouchCancel={() => setIsMarqueePaused(false)}
+            >
               {/* Duplicate array of testimonials for infinite scroll effect */}
               {[1, 2].map((setIndex) => (
                 <div key={setIndex} className="flex gap-8">
