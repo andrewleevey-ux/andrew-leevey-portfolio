@@ -5,15 +5,12 @@
 ▲ Next.js 16.4.0 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 604ms
-✓ Running next.config.ts took 49ms
+✓ Ready in 567ms
+✓ Running next.config.ts took 47ms
 - Cache Components enabled
 - Partial Prefetching enabled
 - Experiments (use with caution):
   ✓ agentFeedback
 
 ○ Compiling / ...
- GET / 200 in 889ms (next.js: 314ms, application-code: 575ms)
- GET / 200 in 457ms (next.js: 66ms, application-code: 390ms)
- GET / 200 in 394ms (next.js: 41ms, application-code: 353ms)
- GET / 200 in 89ms (next.js: 3ms, application-code: 87ms)
+ GET / 200 in 962ms (next.js: 363ms, application-code: 600ms)

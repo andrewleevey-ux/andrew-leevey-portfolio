@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Truck, LineChart, LayoutTemplate, ArrowRight, Lightbulb, GitBranch, PenTool, Users } from "lucide-react";
+import Image from "next/image";
 import AndrewCursor from "../components/AndrewCursor";
 import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
@@ -23,9 +24,15 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-medium text-slate-700 mb-6" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
             Bridging the gap between Service Design and Commercial Strategy.
           </h2>
-          <p className="max-w-2xl text-lg sm:text-xl text-slate-600 leading-relaxed">
-            I am a Lead Product Designer who operates as a commercial advisor. I focus on translating complex business logic into simple, frictionless user journeys that directly boost conversion and retention.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-amber-50 border-2 border-amber-300 rounded-3xl max-w-4xl">
+            <Image src="/lightbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
+            <div>
+              <h3 className="text-3xl font-semibold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">Hello world!</h3>
+              <p className="text-slate-800 text-lg leading-relaxed">
+                I am a lead level product Designer who operates as a commercial advisor. I focus on translating complex business logic into simple, frictionless user journeys that directly improve conversion and retention.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Key Skills Section */}
