@@ -180,7 +180,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-slate-900 text-sm">Suzanne Kenwright</div>
-                        <div className="text-xs text-slate-500">Lead Product Manager</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager | The Very Group</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
@@ -195,7 +195,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-slate-900 text-sm">Elisabeth Mancini</div>
-                        <div className="text-xs text-slate-500">UX Manager</div>
+                        <div className="text-xs text-slate-500">UX Manager | The Very Group</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
@@ -210,7 +210,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-slate-900 text-sm">Lee Somers</div>
-                        <div className="text-xs text-slate-500">Lead Product Manager</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager | The Very Group</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
@@ -226,7 +226,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-slate-900 text-sm">Suzanne Kenwright</div>
-                        <div className="text-xs text-slate-500">Lead Product Manager</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager | The Very Group</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
@@ -241,7 +241,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-slate-900 text-sm">Elisabeth Mancini</div>
-                        <div className="text-xs text-slate-500">UX Manager</div>
+                        <div className="text-xs text-slate-500">UX Manager | The Very Group</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
@@ -256,7 +256,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-slate-900 text-sm">Lee Somers</div>
-                        <div className="text-xs text-slate-500">Lead Product Manager</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager | The Very Group</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
