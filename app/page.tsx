@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Truck, LineChart, LayoutTemplate, ArrowRight, Users } from "lucide-react";
+import { Truck, LayoutTemplate, Users } from "lucide-react";
 import Image from "next/image";
 import AndrewCursor from "../components/AndrewCursor";
 import GuestCursor from "../components/GuestCursor";
@@ -46,24 +46,6 @@ export default function Home() {
                 height={600}
                 className="w-full h-auto"
               />
-              <div className="absolute top-1/2 left-[25.5%] -translate-x-1/2 -translate-y-1/2 w-[8%] max-w-[80px]">
-                <Image
-                  src="/images/mirologo_dd.png"
-                  alt="Miro"
-                  width={100}
-                  height={100}
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="absolute top-1/2 left-[74.5%] -translate-x-1/2 -translate-y-1/2 w-[8%] max-w-[80px]">
-                <Image
-                  src="/images/figmalogo_dd.png"
-                  alt="Figma"
-                  width={100}
-                  height={100}
-                  className="w-full h-auto"
-                />
-              </div>
             </div>
           </div>
         </section>
