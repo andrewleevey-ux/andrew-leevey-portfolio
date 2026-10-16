@@ -7,6 +7,7 @@ import AndrewCursor from "../components/AndrewCursor";
 import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
 import CaseStudyModal from "../components/CaseStudyModal";
+import MikeCursor from "../components/MikeCursor";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -226,7 +227,8 @@ export default function Home() {
         </section>
 
         {/* Case Studies Section */}
-        <section id="work">
+        <section id="work" className="relative">
+          <MikeCursor />
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
           </div>
