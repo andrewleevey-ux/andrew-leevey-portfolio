@@ -184,7 +184,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
+                    <p className="text-slate-600 italic leading-relaxed text-sm">
                       &quot;Andy&apos;s done a brilliant job on the lockers journey in checkout. His knowledge and support throughout have made a massive difference. As the journey evolved and new inputs came in, he took everything in his stride and thoughtfully incorporated the changes into scope without losing momentum. Thanks so much Andy, your contribution has been exceptional, as always.&quot;
                     </p>
                   </div>
@@ -199,7 +199,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
+                    <p className="text-slate-600 italic leading-relaxed text-sm">
                       &quot;Thanks so much for your continued support on the Loyalty programme and its evolution. Your dedication, professionalism and thoughtful input have been invaluable in helping us shape the direction of the work and keep momentum moving forward. It&apos;s always a pleasure working with you.&quot;
                     </p>
                   </div>
@@ -214,25 +214,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
+                    <p className="text-slate-600 italic leading-relaxed text-sm">
                       &quot;Andy, I just wanted to recognise and thank you for the level of thought, detail and effort you&apos;ve put into designing the new Video Hero Fuse component for web and app. You&apos;ve left no stone unturned, deeply considering and balancing both customer and business needs, and managed to keep a huge group of stakeholders well informed and happy along the way. Fantastic work that&apos;s very much appreciated&quot;
                     </p>
                   </div>
-                  <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col h-full">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                        <Users className="text-blue-500 w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900 text-sm">Jody Chambers</div>
-                        <div className="text-xs text-slate-500">Lead Product Manager</div>
-                      </div>
-                    </div>
-                    <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
-                      &quot;[INSERT JODY&apos;S FEEDBACK HERE]&quot;
-                    </p>
-                  </div>
+
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
@@ -244,7 +230,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
+                    <p className="text-slate-600 italic leading-relaxed text-sm">
                       &quot;Andy&apos;s done a brilliant job on the lockers journey in checkout. His knowledge and support throughout have made a massive difference. As the journey evolved and new inputs came in, he took everything in his stride and thoughtfully incorporated the changes into scope without losing momentum. Thanks so much Andy, your contribution has been exceptional, as always.&quot;
                     </p>
                   </div>
@@ -259,7 +245,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
+                    <p className="text-slate-600 italic leading-relaxed text-sm">
                       &quot;Thanks so much for your continued support on the Loyalty programme and its evolution. Your dedication, professionalism and thoughtful input have been invaluable in helping us shape the direction of the work and keep momentum moving forward. It&apos;s always a pleasure working with you.&quot;
                     </p>
                   </div>
@@ -274,25 +260,11 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
+                    <p className="text-slate-600 italic leading-relaxed text-sm">
                       &quot;Andy, I just wanted to recognise and thank you for the level of thought, detail and effort you&apos;ve put into designing the new Video Hero Fuse component for web and app. You&apos;ve left no stone unturned, deeply considering and balancing both customer and business needs, and managed to keep a huge group of stakeholders well informed and happy along the way. Fantastic work that&apos;s very much appreciated&quot;
                     </p>
                   </div>
-                  <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col h-full">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                        <Users className="text-blue-500 w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900 text-sm">Jody Chambers</div>
-                        <div className="text-xs text-slate-500">Lead Product Manager</div>
-                      </div>
-                    </div>
-                    <div className="border-b border-slate-100 mb-4"></div>
-                    <p className="text-slate-600 italic leading-relaxed">
-                      &quot;[INSERT JODY&apos;S FEEDBACK HERE]&quot;
-                    </p>
-                  </div>
+
                 </div>
               ))}
             </div>
