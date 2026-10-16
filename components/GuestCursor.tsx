@@ -14,7 +14,7 @@ export default function GuestCursor() {
     const randomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setColor(randomColor);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+
     setMounted(true);
 
     const updatePosition = (e: MouseEvent) => {
