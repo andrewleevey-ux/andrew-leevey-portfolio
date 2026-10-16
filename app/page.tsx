@@ -48,16 +48,16 @@ export default function Home() {
             <Image
               src="/images/mirologo_dd.png"
               alt="Miro Logo"
-              width={178}
-              height={178}
-              className="absolute left-[25%] top-[50%] -translate-x-1/2 -translate-y-1/2 h-auto"
+              width={89}
+              height={89}
+              className="absolute left-[32%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[89px] h-[89px] object-contain"
             />
             <Image
               src="/images/figmalogo_dd.png"
               alt="Figma Logo"
-              width={100}
-              height={150}
-              className="absolute left-[75%] top-[50%] -translate-x-1/2 -translate-y-1/2 h-auto"
+              width={50}
+              height={75}
+              className="absolute left-[68%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[50px] h-[75px] object-contain"
             />
           </div>
         </section>
