@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Truck, LineChart, LayoutTemplate, ArrowRight, Lightbulb, GitBranch, PenTool, Users } from "lucide-react";
+import { Truck, LineChart, LayoutTemplate, ArrowRight, Users } from "lucide-react";
 import Image from "next/image";
 import AndrewCursor from "../components/AndrewCursor";
 import GuestCursor from "../components/GuestCursor";
@@ -37,59 +37,30 @@ export default function Home() {
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lean Product Process</h2>
           </div>
-          <div className="relative flex flex-col md:flex-row items-center justify-center gap-4">
-            {/* Whiteboard Annotations */}
-            <div className="absolute -top-8 left-0 md:-left-8 text-red-500 font-handwriting text-2xl transform -rotate-6 hidden sm:block">Start here</div>
-            <div className="absolute -bottom-10 right-0 md:-right-4 text-blue-500 font-handwriting text-2xl transform rotate-3 hidden sm:block">Validate first!</div>
-
-            {/* Node 1 */}
-            <div className="bg-white border border-slate-200 rounded-xl shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
-              <Lightbulb className="text-amber-500 mb-1" />
-              <h4 className="font-medium text-slate-900 text-center" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Problem Framing</h4>
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Workshop Facilitation</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Discovery</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Journey Mapping</span>
-              </div>
-            </div>
-
-            <ArrowRight className="text-slate-300 rotate-90 md:rotate-0 flex-shrink-0 w-8 h-8" size={32} />
-
-            {/* Node 2 */}
-            <div className="bg-white border border-slate-200 rounded-xl shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
-              <GitBranch className="text-blue-500 mb-1" />
-              <h4 className="font-medium text-slate-900 text-center" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Service Architecture</h4>
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Flow Mapping</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Logic Definition</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Blueprinting</span>
-              </div>
-            </div>
-
-            <ArrowRight className="text-slate-300 rotate-90 md:rotate-0 flex-shrink-0 w-8 h-8" size={32} />
-
-            {/* Node 3 */}
-            <div className="bg-white border border-slate-200 rounded-xl shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
-              <PenTool className="text-purple-500 mb-1" />
-              <h4 className="font-medium text-slate-900 text-center" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Interaction Design</h4>
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Rapid Prototyping</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Wireframing</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">UX Design</span>
-              </div>
-            </div>
-
-            <ArrowRight className="text-slate-300 rotate-90 md:rotate-0 flex-shrink-0 w-8 h-8" size={32} />
-
-            {/* Node 4 */}
-            <div className="bg-white border border-slate-200 rounded-xl shadow-md p-6 flex flex-col items-center gap-3 w-full md:w-auto">
-              <LineChart className="text-emerald-500 mb-1" />
-              <h4 className="font-medium text-slate-900 text-center" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Commercial Iteration</h4>
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">CRO</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">A/B Testing</span>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">Analytics</span>
-              </div>
+          <div className="w-[100vw] relative left-1/2 -translate-x-1/2 max-w-7xl px-6">
+            <div className="relative w-full">
+              <Image
+                src="/images/lean process double dimond.svg"
+                alt="Lean Process Double Diamond"
+                width={1200}
+                height={600}
+                className="w-full h-auto"
+                priority
+              />
+              <Image
+                src="/images/mirologo_dd.png"
+                alt="Miro Logo"
+                width={89}
+                height={89}
+                className="absolute left-[32%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[89px] h-[89px] object-contain"
+              />
+              <Image
+                src="/images/figmalogo_dd.png"
+                alt="Figma Logo"
+                width={50}
+                height={75}
+                className="absolute left-[68%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[50px] h-[75px] object-contain"
+              />
             </div>
           </div>
         </section>
