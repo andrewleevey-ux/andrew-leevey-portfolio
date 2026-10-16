@@ -179,13 +179,43 @@ export default function Home() {
                         <Users className="text-blue-500 w-5 h-5" />
                       </div>
                       <div>
+                        <div className="font-bold text-slate-900 text-sm">Suzanne Kenwright</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager</div>
+                      </div>
+                    </div>
+                    <div className="border-b border-slate-100 mb-4"></div>
+                    <p className="text-slate-600 italic leading-relaxed mt-auto">
+                      &quot;Andy&apos;s done a brilliant job on the lockers journey in checkout. His knowledge and support throughout have made a massive difference. As the journey evolved and new inputs came in, he took everything in his stride and thoughtfully incorporated the changes into scope without losing momentum. Thanks so much Andy, your contribution has been exceptional, as always.&quot;
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                        <Users className="text-blue-500 w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 text-sm">Elisabeth Mancini</div>
+                        <div className="text-xs text-slate-500">UX Manager</div>
+                      </div>
+                    </div>
+                    <div className="border-b border-slate-100 mb-4"></div>
+                    <p className="text-slate-600 italic leading-relaxed mt-auto">
+                      &quot;Thanks so much for your continued support on the Loyalty programme and its evolution. Your dedication, professionalism and thoughtful input have been invaluable in helping us shape the direction of the work and keep momentum moving forward. It&apos;s always a pleasure working with you.&quot;
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-white border border-slate-200 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                        <Users className="text-blue-500 w-5 h-5" />
+                      </div>
+                      <div>
                         <div className="font-bold text-slate-900 text-sm">Lee Somers</div>
-                        <div className="text-xs text-slate-500">Product Manager @ The Very Group</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
-                      &quot;Andrew transformed our checkout flow, increasing conversion by 15% in just two weeks. His ability to connect user needs to business goals is unparalleled.&quot;
+                      &quot;Andy, I just wanted to recognise and thank you for the level of thought, detail and effort you&apos;ve put into designing the new Video Hero Fuse component for web and app. You&apos;ve left no stone unturned, deeply considering and balancing both customer and business needs, and managed to keep a huge group of stakeholders well informed and happy along the way. Fantastic work that&apos;s very much appreciated&quot;
                     </p>
                   </div>
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
@@ -194,13 +224,13 @@ export default function Home() {
                         <Users className="text-blue-500 w-5 h-5" />
                       </div>
                       <div>
-                        <div className="font-bold text-slate-900 text-sm">Marcus Wright</div>
-                        <div className="text-xs text-slate-500">COO, LogisticsPlus</div>
+                        <div className="font-bold text-slate-900 text-sm">Suzanne Kenwright</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
-                      &quot;He doesn&apos;t just design screens; he designs entire service ecosystems. Our operational efficiency skyrocketed after his strategic deep dive.&quot;
+                      &quot;Andy&apos;s done a brilliant job on the lockers journey in checkout. His knowledge and support throughout have made a massive difference. As the journey evolved and new inputs came in, he took everything in his stride and thoughtfully incorporated the changes into scope without losing momentum. Thanks so much Andy, your contribution has been exceptional, as always.&quot;
                     </p>
                   </div>
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
@@ -209,13 +239,13 @@ export default function Home() {
                         <Users className="text-blue-500 w-5 h-5" />
                       </div>
                       <div>
-                        <div className="font-bold text-slate-900 text-sm">Elena Rostova</div>
-                        <div className="text-xs text-slate-500">Founder & CEO, TechStart</div>
+                        <div className="font-bold text-slate-900 text-sm">Elisabeth Mancini</div>
+                        <div className="text-xs text-slate-500">UX Manager</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
-                      &quot;A rare hybrid of creative design thinking and sharp commercial acumen. Andrew is the advisory partner every leadership team needs.&quot;
+                      &quot;Thanks so much for your continued support on the Loyalty programme and its evolution. Your dedication, professionalism and thoughtful input have been invaluable in helping us shape the direction of the work and keep momentum moving forward. It&apos;s always a pleasure working with you.&quot;
                     </p>
                   </div>
                   <div className="flex-shrink-0 w-96 bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col">
@@ -224,13 +254,13 @@ export default function Home() {
                         <Users className="text-blue-500 w-5 h-5" />
                       </div>
                       <div>
-                        <div className="font-bold text-slate-900 text-sm">David Chen</div>
-                        <div className="text-xs text-slate-500">CTO, FinServe</div>
+                        <div className="font-bold text-slate-900 text-sm">Lee Somers</div>
+                        <div className="text-xs text-slate-500">Lead Product Manager</div>
                       </div>
                     </div>
                     <div className="border-b border-slate-100 mb-4"></div>
                     <p className="text-slate-600 italic leading-relaxed mt-auto">
-                      &quot;His facilitation skills brought our engineering and design teams together like never before. The friction is gone, and delivery is faster.&quot;
+                      &quot;Andy, I just wanted to recognise and thank you for the level of thought, detail and effort you&apos;ve put into designing the new Video Hero Fuse component for web and app. You&apos;ve left no stone unturned, deeply considering and balancing both customer and business needs, and managed to keep a huge group of stakeholders well informed and happy along the way. Fantastic work that&apos;s very much appreciated&quot;
                     </p>
                   </div>
                 </div>
