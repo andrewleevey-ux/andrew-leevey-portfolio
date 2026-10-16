@@ -21,11 +21,8 @@ export default function Home() {
             <span className="font-handwriting text-blue-600 text-6xl sm:text-7xl md:text-8xl">Andrew Leevey</span> <br className="hidden sm:block" />
             <span className="text-3xl sm:text-4xl md:text-5xl text-slate-900 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer</span>
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-medium text-slate-700 mb-6" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
-            Bridging the gap between Service Design and Commercial Strategy.
-          </h2>
-          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl w-full">
-            <Image src="/images/lightbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
+          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl max-w-3xl mx-auto">
+            <Image src="/images/lightbbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
             <div>
               <h3 className="text-3xl font-semibold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">About me...</h3>
               <p className="text-slate-800 text-base leading-relaxed">
