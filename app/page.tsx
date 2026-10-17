@@ -133,7 +133,16 @@ export default function Home() {
         {/* Testimonials Section */}
         <section className="mb-32 overflow-hidden">
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
+            <div className="relative inline-flex items-center justify-center">
+              <h2 className="font-sans text-slate-900 text-center" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
+              <Image
+                src="/images/thankyou.png"
+                alt="Thank you sticker"
+                width={110}
+                height={110}
+                className="absolute left-full top-[-10px] ml-4 max-sm:ml-2 w-[95px] max-sm:w-[70px] h-auto rotate-[12deg] drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)] z-10"
+              />
+            </div>
           </div>
 
           <div
