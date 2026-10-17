@@ -275,8 +275,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10 bg-green-500">
-                  <Image src="/images/1-eurocamp-logo.jpg" alt="Eurocamp Logo" width={56} height={56} className="object-contain rounded-full" />
+                <div className="absolute left-1/2 -translate-x-1/2 w-[100px] h-[100px] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10 bg-[#78B92B]">
+                  <Image src="/images/1-eurocamp-logo.jpg" alt="Eurocamp Logo" width={70} height={70} className="object-contain rounded-full" />
                 </div>
                 <div className="w-1/2 pl-12"></div>
               </div>
@@ -291,8 +291,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10 bg-blue-400">
-                  <Image src="/images/2-love2shop-logo.jpg" alt="Love2shop Logo" width={56} height={56} className="object-contain rounded-full" />
+                <div className="absolute left-1/2 -translate-x-1/2 w-[100px] h-[100px] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10 bg-white">
+                  <Image src="/images/2-love2shop-logo.jpg" alt="Love2shop Logo" width={70} height={70} className="object-contain rounded-full" />
                 </div>
                 <div className="w-1/2 pr-12"></div>
               </div>
@@ -301,14 +301,14 @@ export default function Home() {
               <div className="flex flex-row items-center w-full">
                 <div className="w-1/2 pr-12 flex justify-end">
                   <div className="bg-red-100 p-6 rounded-md shadow-md rotate-2 max-w-sm">
-                    <div className="font-bold text-slate-900 mb-1">2016 - 2020 | UX Designer</div>
+                    <div className="font-bold text-slate-900 mb-1">2016 - 2020 | UXD & CRO manager</div>
                     <p className="text-slate-700 text-sm leading-relaxed">
                       During my time at Iceland I&apos;ve had the opportunity to work on the full redesign of their ecommerce site from start to finish. From there I was able to lead UX in a specific CRO scrum team that involved team process mapping, gaining actionable insight, UX documentation, wireframes and click prototype user testing. The success of this team was recognised in my promotion to CRO Product owner.
                     </p>
                   </div>
                 </div>
-                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10 bg-red-600">
-                  <Image src="/images/3-iceland-logo.jpg" alt="Iceland Logo" width={56} height={56} className="object-contain rounded-full" />
+                <div className="absolute left-1/2 -translate-x-1/2 w-[100px] h-[100px] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10 bg-[#D01F2F]">
+                  <Image src="/images/3-iceland-logo.jpg" alt="Iceland Logo" width={70} height={70} className="object-contain rounded-full" />
                 </div>
                 <div className="w-1/2 pl-12"></div>
               </div>
@@ -323,7 +323,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-xs text-center border-4 border-white shadow-sm z-10 bg-[#DE007B]">
+                <div className="absolute left-1/2 -translate-x-1/2 w-[100px] h-[100px] rounded-full flex items-center justify-center text-white font-bold text-xs text-center border-4 border-white shadow-sm z-10 bg-[#DE007B]">
                   The Very<br/>Group
                 </div>
                 <div className="w-1/2 pr-12"></div>
