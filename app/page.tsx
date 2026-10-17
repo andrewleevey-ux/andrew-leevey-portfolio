@@ -228,7 +228,7 @@ export default function Home() {
         </section>
 
         {/* Case Studies Section */}
-        <section id="work" className="relative">
+        <section id="work">
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
           </div>

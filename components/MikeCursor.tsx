@@ -16,15 +16,18 @@ export default function MikeCursor() {
   return (
     <motion.div
       className="absolute z-[9999] pointer-events-none"
-      initial={{ x: 0, y: 0 }}
+      initial={{ x: 0, y: 0, rotate: 0 }}
       animate={{
-        x: [0, 600, -200, 400, 0],
-        y: [0, 80, -50, 120, 0],
+        x: [0, 600, 600, -200, -200, 400, 400, 0],
+        y: [0, 80, 80, -50, -50, 120, 120, 0],
+        rotate: [0, -5, 0, 5, 0, -2, 0, 0],
       }}
       transition={{
         duration: 20,
         repeat: Infinity,
+        repeatType: "mirror",
         ease: "easeInOut",
+        times: [0, 0.2, 0.25, 0.45, 0.5, 0.7, 0.75, 1],
       }}
       style={{
         top: "20%",
