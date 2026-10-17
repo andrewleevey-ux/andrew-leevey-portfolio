@@ -245,6 +245,96 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Experience Section */}
+        <section id="experience" className="max-w-6xl mx-auto px-6 mb-32">
+          <div className="flex flex-col items-center justify-center mb-16">
+            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>
+              Experience
+            </h2>
+            <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">
+              My Road to UX designer & CRO specialist
+            </h3>
+          </div>
+
+          <div className="relative">
+            {/* Vertical Spine */}
+            <div className="absolute left-1/2 top-0 bottom-0 border-l-2 border-dashed border-slate-400 -translate-x-1/2"></div>
+
+            <div className="flex flex-col gap-12">
+              {/* Block 1: Eurocamp */}
+              <div className="flex flex-row items-center w-full">
+                <div className="w-1/2 pr-12 flex justify-end">
+                  <div className="bg-green-100 p-6 rounded shadow-md shadow-black/10 rotate-1 max-w-sm">
+                    <div className="font-bold text-slate-900 mb-1">2012 - 2014 | Web Designer</div>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      Here I progressed from a Junior to a Mid-weight Web Designer, where my journey into web and UX design really started. I was able to work on multiple projects including a website and platform re-design. I made my mark here by creating a responsive email modular system. This (or the UX methodologies behind this), has made an appearance in every role I&apos;ve had since.
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-xs text-center border-4 border-white shadow-sm z-10 bg-green-500">
+                  Eurocamp
+                </div>
+                <div className="w-1/2 pl-12"></div>
+              </div>
+
+              {/* Block 2: Love2shop */}
+              <div className="flex flex-row-reverse items-center w-full">
+                <div className="w-1/2 pl-12 flex justify-start">
+                  <div className="bg-blue-100 p-6 rounded shadow-md shadow-black/10 -rotate-2 max-w-sm">
+                    <div className="font-bold text-slate-900 mb-1">2014 - 2016 | UX Designer</div>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      Working under Parkgroup which housed love2shop, Park & HighStreet Vouchers gave me a lot of room to grow and refine my process. Here I was able to implement lean UX documentation and lead the redesign of both Park Savings and HighStreetVouchers&apos; websites. I performed in-house user testing and utilised testing programs like Hotjar and Optimizely.
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-xs text-center border-4 border-white shadow-sm z-10 bg-blue-400">
+                  Love2shop
+                </div>
+                <div className="w-1/2 pr-12"></div>
+              </div>
+
+              {/* Block 3: Iceland */}
+              <div className="flex flex-row items-center w-full">
+                <div className="w-1/2 pr-12 flex justify-end">
+                  <div className="bg-red-100 p-6 rounded shadow-md shadow-black/10 rotate-2 max-w-sm">
+                    <div className="font-bold text-slate-900 mb-1">2016 - 2020 | UX Designer</div>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      During my time at Iceland I&apos;ve had the opportunity to work on the full redesign of their ecommerce site from start to finish. From there I was able to lead UX in a specific CRO scrum team that involved team process mapping, gaining actionable insight, UX documentation, wireframes and click prototype user testing. The success of this team was recognised in my promotion to CRO Product owner.
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-xs text-center border-4 border-white shadow-sm z-10 bg-red-600">
+                  Iceland
+                </div>
+                <div className="w-1/2 pl-12"></div>
+              </div>
+
+              {/* Block 4: The Very Group */}
+              <div className="flex flex-row-reverse items-center w-full">
+                <div className="w-1/2 pl-12 flex justify-start">
+                  <div className="bg-[#E9D5FF] p-6 rounded shadow-md shadow-black/10 -rotate-1 max-w-sm">
+                    <div className="font-bold text-slate-900 mb-1">2020 - Present | Lead Product Designer</div>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      Leading user experience and conversion rate optimization for a major UK e-commerce platform. My day-to-day involves driving design workflows and user research using Figma, Miro, ContentSquare, and Survicate, alongside facilitating UX alignments and workshop sessions. Beyond hands-on design, I manage and mentor a product designer on my squad, guiding their career progression and helping shape our team&apos;s overall design strategy and performance.
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-xs text-center border-4 border-white shadow-sm z-10 bg-[#9823F8]">
+                  The Very<br/>Group
+                </div>
+                <div className="w-1/2 pr-12"></div>
+              </div>
+            </div>
+
+            {/* Block 5: The Final Node */}
+            <div className="flex justify-center mt-12 relative z-10">
+              <div className="bg-[#FFDD33] p-6 rounded shadow-md shadow-black/10 -rotate-3 text-center">
+                <div className="font-bold text-slate-900">My next challenge?</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Case Studies Section */}
         <section id="work">
           <div className="flex items-center justify-center mb-12">
