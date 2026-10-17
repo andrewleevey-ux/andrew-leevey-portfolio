@@ -50,7 +50,8 @@ export default function Home() {
         </section>
 
         {/* Deep Dive Section */}
-        <section className="max-w-6xl mx-auto mb-32">
+        <section className="max-w-6xl mx-auto mb-32 relative">
+          <MikeCursor />
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Case Studies</h2>
           </div>
@@ -228,7 +229,6 @@ export default function Home() {
 
         {/* Case Studies Section */}
         <section id="work" className="relative">
-          <MikeCursor />
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
           </div>

@@ -18,7 +18,7 @@ export default function MikeCursor() {
       className="absolute z-[9999] pointer-events-none"
       initial={{ x: 0, y: 0 }}
       animate={{
-        x: [0, 150, -100, 50, 0],
+        x: [0, 600, -200, 400, 0],
         y: [0, 80, -50, 120, 0],
       }}
       transition={{
