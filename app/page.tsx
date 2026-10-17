@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Truck, LineChart, LayoutTemplate, ArrowRight, Users } from "lucide-react";
 import Image from "next/image";
-import AndrewCursor from "../components/AndrewCursor";
+import CollaboratorCursor from "../components/CollaboratorCursor";
 import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
 import CaseStudyModal from "../components/CaseStudyModal";
@@ -16,7 +16,16 @@ export default function Home() {
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
         <section className="relative w-full mb-32">
-          <AndrewCursor />
+          <CollaboratorCursor
+            name="Andrew"
+            role="Lead"
+            color="#ef4444"
+            pathCoordinates={{
+              x: [0, -100, -100, -250, -250, -50, -50, 150],
+              y: [0, 200, 200, 500, 500, 750, 750, 600],
+            }}
+            initialPosition={{ top: "-20px", left: "80%" }}
+          />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
             <span className="font-handwriting text-blue-600 text-6xl sm:text-7xl md:text-8xl">Andrew Leevey</span> <br className="hidden sm:block" />
             <span className="text-3xl sm:text-4xl md:text-5xl text-slate-900 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer</span>
@@ -49,7 +58,18 @@ export default function Home() {
         </section>
 
         {/* Deep Dive Section */}
-        <section className="max-w-6xl mx-auto mb-32">
+        <section className="max-w-6xl mx-auto mb-32 relative">
+          <CollaboratorCursor
+            name="Mike"
+            role="Developer"
+            color="#9823F8"
+            pathCoordinates={{
+              x: [0, 600, 600, -200, -200, 400, 400, 0],
+              y: [0, 80, 80, -50, -50, 120, 120, 0],
+            }}
+            initialPosition={{ top: "20%", left: "50%" }}
+            delay={2}
+          />
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Case Studies</h2>
           </div>
