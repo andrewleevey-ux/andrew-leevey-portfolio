@@ -46,13 +46,21 @@ export default function Home() {
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lean Product Process</h2>
           </div>
-          <div className="-mx-6 md:-mx-16 lg:-mx-32 relative">
+          <div className="-mx-6 md:-mx-16 lg:-mx-32 relative overflow-visible">
             <Image
               src="/images/lean process double diamond.svg"
               alt="Lean Product Process Double Diamond"
               width={1920}
               height={1080}
               className="w-full h-auto"
+            />
+            {/* Turtle Rocket Sticker */}
+            <Image
+              src="/images/turtlerocket.svg"
+              alt="Turtle Rocket Sticker"
+              width={120}
+              height={120}
+              className="absolute top-1 lg:-top-6 right-8 md:-right-8 lg:-right-12 z-10 w-[70px] md:w-[120px] h-auto rotate-12 drop-shadow-[3px_5px_8px_rgba(0,0,0,0.15)]"
             />
           </div>
         </section>
