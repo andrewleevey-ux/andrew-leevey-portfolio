@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Truck, LineChart, LayoutTemplate, ArrowRight, Users, Link as LinkIcon } from "lucide-react";
+import { Truck, LineChart, LayoutTemplate, ArrowRight, Users, Link as LinkIcon, Download } from "lucide-react";
 import Image from "next/image";
 import CollaboratorCursor from "../components/CollaboratorCursor";
 import GuestCursor from "../components/GuestCursor";
@@ -428,7 +428,7 @@ export default function Home() {
         </section>
 
         {/* About Me Section */}
-        <section id="about" className="max-w-6xl mx-auto mb-32 relative">
+        <section id="about" className="max-w-6xl mx-auto mt-24 md:mt-32 mb-32 relative">
           <div className="flex flex-col items-center justify-center mb-16">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>About me</h2>
             <h3 className="text-lg text-slate-600 text-center mt-2">Who am I?</h3>
@@ -442,11 +442,11 @@ export default function Home() {
                 Outside work, I am a husband and father to three children. We spend a lot of time outdoors at equestrian events across the UK. I am also an avid gamer having built my own PC, and in recent years exploring VR gaming. Recently, I bought my first drone and passed the, albeit small, barrier to entry of the registration process.
               </p>
               <div className="flex flex-wrap gap-4 mt-2">
-                <a href="#" className="bg-[#0A66C2] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:-translate-y-1 transition-transform">
+                <a href="#" className="bg-[#0A66C2] text-white px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
                   <LinkIcon size={20} /> Get in touch
                 </a>
-                <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-slate-300 text-slate-700 px-6 py-3 rounded-full font-medium hover:bg-slate-50 transition-colors">
-                  Download CV
+                <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-slate-200 text-slate-800 px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:bg-slate-50">
+                  <Download size={20} /> Download CV
                 </a>
               </div>
             </div>
