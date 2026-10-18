@@ -36,7 +36,7 @@ export default function FloatingNav() {
         <FileText size={18} /> CV
       </Link>
       <Link
-        href="/#about"
+        href="#about"
         className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
       >
         <User size={18} /> About
