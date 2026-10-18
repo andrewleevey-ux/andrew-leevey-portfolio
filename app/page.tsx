@@ -146,7 +146,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="relative mb-32 overflow-hidden">
+        <section className="relative mb-32 z-40">
           <CollaboratorCursor
             name="Lis"
             role="UX manager"
