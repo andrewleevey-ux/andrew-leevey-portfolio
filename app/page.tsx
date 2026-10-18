@@ -50,8 +50,9 @@ export default function Home() {
 
         {/* Lean Product Process Section */}
         <section className="mb-32">
-          <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lean Product Process</h2>
+          <div className="flex flex-col items-center justify-center mb-12">
+            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>My Lean Process</h2>
+            <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">Using the Double Diamond framework</h3>
           </div>
           <div className="-mx-6 md:-mx-16 lg:-mx-32 relative overflow-visible">
             <Image
