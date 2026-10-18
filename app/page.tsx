@@ -146,7 +146,18 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="mb-32 overflow-hidden">
+        <section className="relative mb-32 z-40">
+          <CollaboratorCursor
+            name="Lis"
+            role="UX manager"
+            color="#3b82f6"
+            pathCoordinates={{
+              x: [0, 50, 80, 40, -20, 0],
+              y: [0, -30, 20, 60, 10, 0],
+            }}
+            initialPosition={{ top: "3rem", left: "-2rem" }}
+            delay={2}
+          />
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
           </div>
