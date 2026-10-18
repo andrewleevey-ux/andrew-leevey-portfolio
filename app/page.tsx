@@ -15,7 +15,7 @@ export default function Home() {
       <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
-        <section className="relative w-full mb-32">
+        <section className="relative w-full mb-32 flex flex-col items-center text-center">
           <CollaboratorCursor
             name="Andrew"
             role="Lead"
@@ -26,11 +26,18 @@ export default function Home() {
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
           />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-            <span className="font-handwriting text-blue-600 text-6xl sm:text-7xl md:text-8xl">Andrew Leevey</span> <br className="hidden sm:block" />
-            <span className="text-3xl sm:text-4xl md:text-5xl text-slate-900 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer</span>
+          <h1 className="tracking-tight mb-16 relative inline-block">
+            <Image
+              src="/images/startflag.svg"
+              alt="Start Flag"
+              width={140}
+              height={140}
+              className="absolute -top-6 left-[-60px] md:left-[-160px] w-[120px] md:w-[140px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)] z-10"
+            />
+            <span className="font-handwriting font-bold text-blue-600 text-8xl md:text-[8rem] lg:text-[10rem]">Andrew Leevey</span> <br className="hidden sm:block" />
+            <span className="text-2xl md:text-3xl font-medium text-slate-800 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer</span>
           </h1>
-          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl max-w-3xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl max-w-3xl mx-auto text-left">
             <Image src="/images/lightbbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
             <div>
               <h3 className="text-3xl font-semibold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">About me...</h3>
