@@ -26,13 +26,13 @@ export default function Home() {
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
           />
-          <h1 className="tracking-tight mb-6 relative inline-block">
+          <h1 className="tracking-tight mb-16 relative inline-block">
             <Image
               src="/images/startflag.svg"
               alt="Start Flag"
-              width={80}
-              height={80}
-              className="absolute -top-6 -left-16 w-[60px] md:w-[80px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)] z-10"
+              width={140}
+              height={140}
+              className="absolute -top-6 left-[-100px] w-[120px] md:w-[140px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)] z-10"
             />
             <span className="font-handwriting text-blue-600 text-8xl md:text-[8rem] lg:text-[10rem]">Andrew Leevey</span> <br className="hidden sm:block" />
             <span className="text-2xl md:text-3xl font-medium text-slate-800 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer</span>
