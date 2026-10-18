@@ -159,7 +159,16 @@ export default function Home() {
             delay={2}
           />
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
+            <div className="relative inline-block w-full">
+              <Image
+                src="/images/look.svg"
+                alt="Look Sticker"
+                width={120}
+                height={120}
+                className="absolute -top-6 left-[-60px] md:left-[-160px] z-10 w-[70px] md:w-[120px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)]"
+              />
+              <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
+            </div>
           </div>
 
           <div
