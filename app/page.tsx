@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div className="-mx-6 md:-mx-16 lg:-mx-32 relative overflow-visible">
             <Image
-              src="/images/lean process double dimond.png"
+              src="/images/lean_process_DD_v2.png"
               alt="Lean Product Process Double Diamond"
               width={1920}
               height={1080}
