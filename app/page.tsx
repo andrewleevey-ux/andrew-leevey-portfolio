@@ -12,11 +12,11 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
-      <GuestCursor />
+      {!isModalOpen && <GuestCursor />}
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
         <section className="relative w-full mb-32 flex flex-col items-center text-center">
-          <CollaboratorCursor
+          {!isModalOpen && <CollaboratorCursor
             name="Andrew"
             role="Lead"
             color="#ef4444"
@@ -25,7 +25,7 @@ export default function Home() {
               y: [0, 200, 200, 500, 500, 750, 750, 600],
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
-          />
+          />}
           <h1 className="tracking-tight mb-16 relative inline-block">
             <Image
               src="/images/startflag.svg"
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Deep Dive Section */}
         <section className="max-w-6xl mx-auto mb-32 relative">
-          <CollaboratorCursor
+          {!isModalOpen && <CollaboratorCursor
             name="Mike"
             role="Developer"
             color="#9823F8"
@@ -85,7 +85,7 @@ export default function Home() {
             }}
             initialPosition={{ top: "20%", left: "50%" }}
             delay={2}
-          />
+          />}
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Case Studies</h2>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <section className="relative mb-32 z-40">
-          <CollaboratorCursor
+          {!isModalOpen && <CollaboratorCursor
             name="Lis"
             role="UX manager"
             color="#3b82f6"
@@ -158,7 +158,7 @@ export default function Home() {
             }}
             initialPosition={{ top: "3rem", left: "-2rem" }}
             delay={2}
-          />
+          />}
           <div className="flex items-center justify-center mb-12">
             <div className="relative inline-block w-full">
               <Image
@@ -384,20 +384,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="group bg-yellow-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square -rotate-2 cursor-pointer" onClick={() => setIsModalOpen(true)}>
+            <div className="group bg-yellow-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square -rotate-2">
               <div className="w-12 h-12 bg-yellow-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                 <Truck size={24} />
               </div>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">CRO</span>
-                <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">E-commerce</span>
-                <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Lean UX</span>
-              </div>
-              <h4 className="text-xl font-medium text-slate-900 mb-3" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Checkout Delivery Optimization</h4>
+              <h4 className="text-xl font-medium text-slate-900 mb-3" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>2-Person Delivery</h4>
               <p className="text-slate-700 leading-relaxed flex-grow">
-                The brief was simple: &apos;Simplify delivery&apos;. See how we used a lean, hypothesis-driven approach to reduce checkout friction and boost high-margin delivery adoption just in time for peak trading.
+                Mapping the end-to-end journey connecting the digital checkout to physical door-drop logistics.
               </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700">
+              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
                 View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
