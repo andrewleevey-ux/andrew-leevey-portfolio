@@ -12,7 +12,7 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
-      {!isModalOpen && <GuestCursor />}
+      <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
         <section className="relative w-full mb-32 flex flex-col items-center text-center">
