@@ -384,15 +384,20 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="group bg-yellow-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square -rotate-2">
+            <div className="group bg-yellow-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square -rotate-2 cursor-pointer" onClick={() => setIsModalOpen(true)}>
               <div className="w-12 h-12 bg-yellow-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
                 <Truck size={24} />
               </div>
-              <h4 className="text-xl font-medium text-slate-900 mb-3" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>2-Person Delivery</h4>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">CRO</span>
+                <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">E-commerce</span>
+                <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Lean UX</span>
+              </div>
+              <h4 className="text-xl font-medium text-slate-900 mb-3" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Checkout Delivery Optimization</h4>
               <p className="text-slate-700 leading-relaxed flex-grow">
-                Mapping the end-to-end journey connecting the digital checkout to physical door-drop logistics.
+                The brief was simple: &apos;Simplify delivery&apos;. See how we used a lean, hypothesis-driven approach to reduce checkout friction and boost high-margin delivery adoption just in time for peak trading.
               </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
+              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700">
                 View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
