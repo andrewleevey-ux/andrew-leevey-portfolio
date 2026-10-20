@@ -15,7 +15,7 @@ export default function Home() {
       <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
-        <section className="relative w-full mb-32 flex flex-col items-center text-center">
+        <section className="relative w-full mb-[10vh] md:mb-[15vh] flex flex-col items-center text-center">
           {!isModalOpen && <CollaboratorCursor
             name="Andrew"
             role="Lead"
@@ -49,7 +49,7 @@ export default function Home() {
         </section>
 
         {/* Lean Product Process Section */}
-        <section className="mb-32">
+        <section className="mb-[10vh] md:mb-[15vh]">
           <div className="flex flex-col items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>My Lean Process</h2>
             <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">Using the Double Diamond framework</h3>
@@ -74,7 +74,7 @@ export default function Home() {
         </section>
 
         {/* Deep Dive Section */}
-        <section className="max-w-6xl mx-auto mb-32 relative">
+        <section className="max-w-6xl mx-auto mb-[10vh] md:mb-[15vh] relative">
           {!isModalOpen && <CollaboratorCursor
             name="Mike"
             role="Developer"
@@ -147,7 +147,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="relative mb-32 z-40">
+        <section className="relative mb-[10vh] md:mb-[15vh] z-40">
           {!isModalOpen && <CollaboratorCursor
             name="Lis"
             role="UX manager"
@@ -283,7 +283,7 @@ export default function Home() {
 
 
         {/* Experience Section */}
-        <section id="experience" className="max-w-6xl mx-auto px-6 mb-32">
+        <section id="experience" className="max-w-6xl mx-auto px-6 mb-[10vh] md:mb-[15vh]">
           <div className="flex flex-col items-center justify-center mb-16">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>
               Experience
@@ -377,7 +377,7 @@ export default function Home() {
 
 
         {/* Case Studies Section */}
-        <section id="work">
+        <section id="work" className="mb-[10vh] md:mb-[15vh]">
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
           </div>
@@ -428,7 +428,7 @@ export default function Home() {
         </section>
 
         {/* About Me Section */}
-        <section id="about" className="max-w-6xl mx-auto mt-24 md:mt-32 mb-32 relative">
+        <section id="about" className="max-w-6xl mx-auto mt-[10vh] md:mt-[15vh] mb-[10vh] md:mb-[15vh] relative">
           <div className="flex flex-col items-center justify-center mb-16">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>About me</h2>
             <h3 className="text-lg text-slate-600 text-center mt-2">Who am I?</h3>
