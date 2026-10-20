@@ -16,7 +16,7 @@ export default function Home() {
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
         <section className="relative w-full mb-32 flex flex-col items-center text-center">
-          <CollaboratorCursor
+          {!isModalOpen && <CollaboratorCursor
             name="Andrew"
             role="Lead"
             color="#ef4444"
@@ -25,7 +25,7 @@ export default function Home() {
               y: [0, 200, 200, 500, 500, 750, 750, 600],
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
-          />
+          />}
           <h1 className="tracking-tight mb-16 relative inline-block">
             <Image
               src="/images/startflag.svg"
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Deep Dive Section */}
         <section className="max-w-6xl mx-auto mb-32 relative">
-          <CollaboratorCursor
+          {!isModalOpen && <CollaboratorCursor
             name="Mike"
             role="Developer"
             color="#9823F8"
@@ -85,7 +85,7 @@ export default function Home() {
             }}
             initialPosition={{ top: "20%", left: "50%" }}
             delay={2}
-          />
+          />}
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Case Studies</h2>
           </div>
@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
-                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Strategic Product Vision</h3>
+                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>CRO & Strategic Product Vision</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Aligning business objectives with user needs through comprehensive research, stakeholder workshops, and clear, actionable product roadmaps that drive growth.
                 </p>
@@ -148,7 +148,7 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <section className="relative mb-32 z-40">
-          <CollaboratorCursor
+          {!isModalOpen && <CollaboratorCursor
             name="Lis"
             role="UX manager"
             color="#3b82f6"
@@ -158,7 +158,7 @@ export default function Home() {
             }}
             initialPosition={{ top: "3rem", left: "-2rem" }}
             delay={2}
-          />
+          />}
           <div className="flex items-center justify-center mb-12">
             <div className="relative inline-block w-full">
               <Image
