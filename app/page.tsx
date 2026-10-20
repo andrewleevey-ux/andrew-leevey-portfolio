@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
-                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>CRO & strategic product vision</h3>
+                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>CRO & Strategic Product Vision</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Aligning business objectives with user needs through comprehensive research, stakeholder workshops, and clear, actionable product roadmaps that drive growth.
                 </p>
