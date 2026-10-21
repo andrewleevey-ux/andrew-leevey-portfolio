@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Lightbulb } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
 
 export default function CheckoutDeliveryCaseStudy() {
@@ -108,9 +108,14 @@ export default function CheckoutDeliveryCaseStudy() {
             <p className="mb-4">
               During the session, it became obvious that the promotional banner was a primary target for investigation. We also noticed its backend logic was causing it to jump around depending on the basket type.
             </p>
-            <p className="mb-4">
-              Quick aside: This exact moment highlights why having the full squad involved early is so crucial. Having QA in the room meant we could map out complex scenarios and edge cases upfront, saving us from painful rework later down the line.
-            </p>
+
+            <div className="bg-white/60 border border-slate-200 text-slate-700 p-6 rounded-2xl shadow-sm backdrop-blur-sm mb-4 flex gap-4 items-start">
+              <Lightbulb className="w-6 h-6 text-slate-400 shrink-0 mt-1" />
+              <p>
+                This exact moment highlights why having the full squad involved early is so crucial. Having QA in the room meant we could map out complex scenarios and edge cases upfront, saving us from painful rework later down the line.
+              </p>
+            </div>
+
             <p className="mb-4 font-medium text-slate-800">
               The two big, data-backed takeaways from our lean discovery were clear:
             </p>
