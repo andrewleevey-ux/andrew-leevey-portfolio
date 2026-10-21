@@ -439,7 +439,7 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-col gap-6">
               <p className="text-slate-700 leading-relaxed">
-                Outside work, I am a husband and father to three children. We spend a lot of time outdoors at equestrian events across the UK. I am also an avid gamer having built my own PC, and in recent years exploring VR gaming. Recently, I bought my first drone and passed the, albeit small, barrier to entry of the registration process.
+                When I am not designing, I am a husband and dad to three kids, usually spending my weekends outdoors at equestrian events across the UK. I am also an avid custom PC builder and VR gamer, and I recently registered my first drone to start flying.
               </p>
               <div className="flex flex-wrap gap-4 mt-2">
                 <a href="#" className="bg-[#0A66C2] text-white px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
