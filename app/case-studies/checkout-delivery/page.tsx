@@ -39,7 +39,7 @@ export default function CheckoutDeliveryCaseStudy() {
             <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Outcomes overview
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-8">
               <div>
                 <h3 className="font-bold text-slate-800 mb-2">Project goals</h3>
                 <ul className="list-disc pl-5 space-y-1 text-sm md:text-base">
