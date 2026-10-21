@@ -9,14 +9,14 @@ import DynamicYear from "../components/DynamicYear";
 import CaseStudyModal from "../components/CaseStudyModal";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null);
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
       <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
         {/* Hero Section */}
         <section className="relative w-full mb-[10vh] md:mb-[15vh] flex flex-col items-center text-center">
-          {!isModalOpen && <CollaboratorCursor
+          {!activeCaseStudy && <CollaboratorCursor
             name="Andrew"
             role="Lead"
             color="#ef4444"
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Deep Dive Section */}
         <section className="max-w-6xl mx-auto mb-[10vh] md:mb-[15vh] relative">
-          {!isModalOpen && <CollaboratorCursor
+          {!activeCaseStudy && <CollaboratorCursor
             name="Mike"
             role="Developer"
             color="#9823F8"
@@ -102,7 +102,7 @@ export default function Home() {
                 <p className="text-slate-600 mb-6 flex-grow">
                   Aligning business objectives with user needs through comprehensive research, stakeholder workshops, and clear, actionable product roadmaps that drive growth.
                 </p>
-                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setIsModalOpen(true)}>
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setActiveCaseStudy("checkout-delivery")}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function Home() {
                 <p className="text-slate-600 mb-6 flex-grow">
                   Utilizing analytics, A/B testing, and user feedback loops to continuously iterate and refine digital experiences, ensuring measurable improvements in conversion rates.
                 </p>
-                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setIsModalOpen(true)}>
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setActiveCaseStudy("placeholder-2")}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function Home() {
                 <p className="text-slate-600 mb-6 flex-grow">
                   Mapping out end-to-end service blueprints to identify friction points across both digital touchpoints and operational processes, delivering a unified customer journey.
                 </p>
-                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setIsModalOpen(true)}>
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setActiveCaseStudy("placeholder-3")}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <section className="relative mb-[10vh] md:mb-[15vh] z-40">
-          {!isModalOpen && <CollaboratorCursor
+          {!activeCaseStudy && <CollaboratorCursor
             name="Lis"
             role="UX manager"
             color="#3b82f6"
@@ -392,7 +392,7 @@ export default function Home() {
               <p className="text-slate-700 leading-relaxed flex-grow">
                 Mapping the end-to-end journey connecting the digital checkout to physical door-drop logistics.
               </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
+              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer" onClick={() => setActiveCaseStudy("checkout-delivery")}>
                 View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
@@ -406,7 +406,7 @@ export default function Home() {
               <p className="text-slate-700 leading-relaxed flex-grow">
                 Running rapid, hypothesis-driven testing cycles to de-risk delivery and lift online revenue.
               </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
+              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer" onClick={() => setActiveCaseStudy("placeholder-2")}>
                 View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
@@ -420,7 +420,7 @@ export default function Home() {
               <p className="text-slate-700 leading-relaxed flex-grow">
                 Building a bespoke internal framework that standardised product discovery and cut friction between design and engineering.
               </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer">
+              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer" onClick={() => setActiveCaseStudy("placeholder-3")}>
                 View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
@@ -452,7 +452,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        <CaseStudyModal activeCaseStudy={activeCaseStudy} onClose={() => setActiveCaseStudy(null)} />
       </main>
 
       <footer className="border-t border-slate-200 mt-20">
