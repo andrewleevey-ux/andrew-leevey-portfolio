@@ -1,22 +1,11 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
-import CollaboratorCursor from "../../../components/CollaboratorCursor";
 
 export default function CheckoutDeliveryCaseStudy() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
       <GuestCursor />
-      <CollaboratorCursor
-        name="Andrew"
-        role="Lead"
-        color="#ef4444"
-        pathCoordinates={{
-          x: [0, -100, -100, -250, -250, -50, -50, 150],
-          y: [0, 200, 200, 500, 500, 750, 750, 600],
-        }}
-        initialPosition={{ top: "-20px", left: "80%" }}
-      />
 
       <main className="max-w-3xl mx-auto px-6 pt-[10vh] pb-[15vh]">
         <Link
