@@ -18,10 +18,10 @@ export default function CheckoutDeliveryCaseStudy() {
         initialPosition={{ top: "-20px", left: "80%" }}
       />
 
-      <main className="max-w-3xl mx-auto px-6 pt-24 pb-32">
+      <main className="max-w-3xl mx-auto px-6 pt-[10vh] pb-[15vh]">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-12"
+          className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[10vh]"
         >
           <ChevronLeft size={16} /> Back
         </Link>
@@ -30,13 +30,13 @@ export default function CheckoutDeliveryCaseStudy() {
           Iterative CRO strategy: Checkout Delivery
         </h1>
 
-        <div className="text-slate-600 text-lg leading-relaxed space-y-8">
+        <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
           <p className="font-bold text-xl text-slate-800">
             The brief was simple: &quot;Simplify delivery.&quot; With peak trading fast approaching, we had to move quickly. Our goal was to reduce checkout friction and formulate high-impact CRO hypotheses to streamline the delivery experience before the busiest time of the year.
           </p>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Outcomes overview
             </h2>
             <div className="flex flex-col gap-8">
@@ -71,7 +71,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Getting started: WTF?? (What&apos;s the Flow?)
             </h2>
             <p className="mb-4">
@@ -86,7 +86,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               The data
             </h2>
             <p className="mb-4">
@@ -104,7 +104,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Team Teardowns
             </h2>
             <p className="mb-4">
@@ -132,7 +132,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               The Hypotheses
             </h2>
             <p className="mb-4">
@@ -149,7 +149,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Design time: Wireframes
             </h2>
             <p className="mb-8">
@@ -167,7 +167,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Outtakes & Exploration
             </h2>
             <p className="mb-4">
@@ -180,7 +180,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               The Results
             </h2>
             <h3 className="text-2xl font-bold text-slate-800 mb-4">CRO: Hypothesis 1</h3>
@@ -191,7 +191,7 @@ export default function CheckoutDeliveryCaseStudy() {
           </section>
 
           <section>
-            <h2 className="text-slate-900 mb-6 mt-16" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Conclusion
             </h2>
             <p className="mb-4">
