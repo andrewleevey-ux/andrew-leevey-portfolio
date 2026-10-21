@@ -5,12 +5,12 @@ import Link from "next/link";
 import { X } from "lucide-react";
 
 interface CaseStudyModalProps {
-  isOpen: boolean;
+  activeCaseStudy: string | null;
   onClose: () => void;
 }
 
-export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
-  if (!isOpen) return null;
+export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyModalProps) {
+  if (!activeCaseStudy) return null;
 
   return (
     <div
@@ -87,7 +87,7 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
           {/* Bottom Action Bar */}
           <div className="flex gap-4 mt-8 pt-6 border-t border-slate-100">
             <Link
-              href="/case-studies/strategic-vision"
+              href={`/case-studies/${activeCaseStudy}`}
               onClick={onClose}
               className="bg-slate-900 text-white rounded-full px-6 py-3 font-medium hover:bg-slate-800 transition-colors"
             >
