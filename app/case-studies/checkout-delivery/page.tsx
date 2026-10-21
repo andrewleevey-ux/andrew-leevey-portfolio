@@ -109,7 +109,7 @@ export default function CheckoutDeliveryCaseStudy() {
               During the session, it became obvious that the promotional banner was a primary target for investigation. We also noticed its backend logic was causing it to jump around depending on the basket type.
             </p>
 
-            <div className="border-l-2 border-purple-900 bg-purple-100 p-6 rounded-r-md shadow-sm mb-4">
+            <div className="border-l-4 border-purple-900 bg-purple-100 p-6 rounded-r-md shadow-sm my-10">
               <strong className="block text-purple-900 font-semibold mb-2">Quick aside</strong>
               <p className="text-slate-700 italic text-sm md:text-base">
                 This exact moment highlights why having the full squad involved early is so crucial. Having QA in the room meant we could map out complex scenarios and edge cases upfront, saving us from painful rework later down the line.
