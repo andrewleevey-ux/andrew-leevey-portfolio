@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
+import { caseStudiesData } from "../data/caseStudiesData";
 
 interface CaseStudyModalProps {
   activeCaseStudy: string | null;
@@ -11,6 +12,10 @@ interface CaseStudyModalProps {
 
 export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyModalProps) {
   if (!activeCaseStudy) return null;
+
+  const data = caseStudiesData.find((study) => study.slug === activeCaseStudy);
+
+  if (!data) return null;
 
   return (
     <div
@@ -43,43 +48,22 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
         {/* Content Area */}
         <div className="p-6 sm:p-8 flex flex-col gap-4">
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight leading-tight mb-2" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
-            Iterative CRO strategy: Checkout Delivery
+            {data.title}
           </h2>
 
           <p className="text-sm md:text-base text-slate-600">
-            The brief for this project was simply &apos;Simplify delivery&apos;. As an online retailer this is a crucial step towards the customer completing the purchase and we are always looking for ways to make the checkout process easier. With peak trading fast approaching, we needed to move at pace. Our goal: reduce checkout friction and formulate high-impact hypotheses to simplify delivery before the busiest time of the year.
+            {data.summary}
           </p>
 
 
 
 
           <div className="mt-1">
-            <h3 className="text-sm font-bold mb-2">Project goals</h3>
+            <h3 className="text-sm font-bold mb-2">Key Highlights</h3>
             <ul className="list-disc pl-6 text-sm text-slate-700 flex flex-col space-y-1">
-              <li>Increase adoption of higher-margin delivery options (Next Day delivery)</li>
-              <li>Create testable hypothesis</li>
-              <li>Deliver at pace to support peak trading</li>
-              <li>Lean UX test and learn approach</li>
-            </ul>
-          </div>
-
-          <div className="mt-1">
-            <h3 className="text-sm font-bold mb-2">Deliverables</h3>
-            <ul className="list-disc pl-6 text-sm text-slate-700 flex flex-col space-y-1">
-              <li>Discovery planning &amp; supporting Miro board</li>
-              <li>A Design supported by everyone</li>
-              <li>Miro board with clear recommendations</li>
-              <li>Responsive Figma designs</li>
-            </ul>
-          </div>
-
-          <div className="mt-1">
-            <h3 className="text-sm font-bold mb-2">Outcomes</h3>
-            <ul className="list-disc pl-6 text-sm text-slate-700 flex flex-col space-y-1">
-              <li>Two hypothesis based CRO tests</li>
-              <li>Iterative vision and single test approaches</li>
-              <li>Delivery page conversion increase</li>
-              <li>Winning experiment moved to implementation track</li>
+              {data.highlights.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
             </ul>
           </div>
 

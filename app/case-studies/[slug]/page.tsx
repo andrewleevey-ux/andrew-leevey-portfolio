@@ -1,8 +1,48 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
+import { caseStudiesData } from "../../../data/caseStudiesData";
+import { notFound } from "next/navigation";
 
-export default function CheckoutDeliveryCaseStudy() {
+export function generateStaticParams() {
+  return caseStudiesData.map((study) => ({
+    slug: study.slug,
+  }));
+}
+
+export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const data = caseStudiesData.find((study) => study.slug === resolvedParams.slug);
+
+  if (!data) {
+    notFound();
+  }
+
+  // If this is a placeholder case study, render the simple view
+  if (resolvedParams.slug !== "checkout-delivery") {
+    return (
+      <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
+        <GuestCursor />
+        <main className="max-w-3xl mx-auto px-6 pt-[10vh] pb-[15vh]">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[10vh]"
+          >
+            <ChevronLeft size={16} /> Back
+          </Link>
+          <h1 className="text-5xl md:text-6xl font-normal text-slate-900 text-center mb-16" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            {data.title}
+          </h1>
+          <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
+            <p className="font-bold text-xl text-slate-800 text-center">
+              {data.pageContent}
+            </p>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
       <GuestCursor />
@@ -16,7 +56,7 @@ export default function CheckoutDeliveryCaseStudy() {
         </Link>
 
         <h1 className="text-5xl md:text-6xl font-normal text-slate-900 text-center mb-16" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
-          Iterative CRO strategy: Checkout Delivery
+          {data.title}
         </h1>
 
         <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
