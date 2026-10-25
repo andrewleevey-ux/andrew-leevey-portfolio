@@ -23,7 +23,7 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl flex flex-col font-sans text-slate-900 leading-[1.15]"
+        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl flex flex-col font-sans text-slate-900 leading-[1.15]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button Hovering Over Image */}
@@ -46,12 +46,12 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
         </div>
 
         {/* Content Area */}
-        <div className="p-6 sm:p-8 flex flex-col gap-4">
-          <h2 className="text-2xl md:text-3xl font-medium tracking-tight leading-tight mb-2" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
+        <div className="p-8 sm:p-10 flex flex-col gap-4">
+          <h2 className="text-3xl font-bold text-slate-900 tracking-tight leading-tight mb-2" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
             {data.title}
           </h2>
 
-          <p className="text-sm md:text-base text-slate-600">
+          <p className="text-lg leading-relaxed text-slate-700 mb-8">
             {data.summary}
           </p>
 
@@ -59,8 +59,8 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
 
 
           <div className="mt-1">
-            <h3 className="text-sm font-bold mb-2">Key Highlights</h3>
-            <ul className="list-disc pl-6 text-sm text-slate-700 flex flex-col space-y-1">
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Key Highlights</h3>
+            <ul className="list-disc pl-6 text-base text-slate-700 space-y-3 flex flex-col">
               {data.highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
