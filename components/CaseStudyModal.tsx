@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
+import { caseStudiesData } from "../data/caseStudiesData";
 
 interface CaseStudyModalProps {
   activeCaseStudy: string | null;
@@ -11,6 +12,10 @@ interface CaseStudyModalProps {
 
 export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyModalProps) {
   if (!activeCaseStudy) return null;
+
+  const data = caseStudiesData.find((study) => study.slug === activeCaseStudy);
+
+  if (!data) return null;
 
   return (
     <div
@@ -43,11 +48,11 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
         {/* Content Area */}
         <div className="p-6 sm:p-8 flex flex-col gap-4">
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight leading-tight mb-2" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
-            Iterative CRO strategy: Checkout Delivery
+            {data.title}
           </h2>
 
           <p className="text-sm md:text-base text-slate-600">
-            As the Lead Product Designer, I collaborated closely with my PM and key stakeholders to deliver tangible commercial value. By identifying targeted CRO testing opportunities within the checkout, we boosted the adoption of high-margin delivery options and drove a significant uplift in key metrics.
+            {data.summary}
           </p>
 
 
@@ -56,10 +61,9 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
           <div className="mt-1">
             <h3 className="text-sm font-bold mb-2">Key Highlights</h3>
             <ul className="list-disc pl-6 text-sm text-slate-700 flex flex-col space-y-1">
-              <li>Led end-to-end discovery and stakeholder alignment</li>
-              <li>Applied a Lean UX &quot;test and learn&quot; methodology</li>
-              <li>Increased conversion rate on the delivery page</li>
-              <li>Winning experiment moved directly into implementation</li>
+              {data.highlights.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
             </ul>
           </div>
 

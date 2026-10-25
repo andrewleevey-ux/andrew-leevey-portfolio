@@ -1,0 +1,31 @@
+export const caseStudiesData = [
+  {
+    id: 1,
+    slug: "checkout-delivery",
+    title: "Iterative CRO strategy: Checkout Delivery",
+    summary: "As the Lead Product Designer, I collaborated closely with my PM and key stakeholders to deliver tangible commercial value. By identifying targeted CRO testing opportunities within the checkout, we boosted the adoption of high-margin delivery options and drove a significant uplift in key metrics.",
+    highlights: [
+      "Led end-to-end discovery and stakeholder alignment",
+      "Applied a Lean UX \"test and learn\" methodology",
+      "Increased conversion rate on the delivery page",
+      "Winning experiment moved directly into implementation"
+    ],
+    pageContent: "Full case study content here."
+  },
+  {
+    id: 2,
+    slug: "placeholder-2",
+    title: "Data-Driven Design",
+    summary: "Coming Soon",
+    highlights: ["Coming Soon"],
+    pageContent: "Coming Soon"
+  },
+  {
+    id: 3,
+    slug: "placeholder-3",
+    title: "Service Ecosystems",
+    summary: "Coming Soon",
+    highlights: ["Coming Soon"],
+    pageContent: "Coming Soon"
+  }
+];
