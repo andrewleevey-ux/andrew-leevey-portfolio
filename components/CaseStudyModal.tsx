@@ -51,7 +51,7 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
             {data.title}
           </h2>
 
-          <p className="text-lg leading-relaxed text-slate-700 mb-8">
+          <p className="text-base leading-relaxed text-slate-700 mb-8">
             {data.summary}
           </p>
 
