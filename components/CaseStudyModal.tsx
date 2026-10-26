@@ -47,9 +47,16 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
 
         {/* Content Area */}
         <div className="p-8 sm:p-10 flex flex-col gap-4">
-          <h2 className="text-3xl font-bold text-slate-900 tracking-tight leading-tight mb-2" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
-            {data.title}
-          </h2>
+          <div>
+            {data.subtitle && (
+              <span className="block text-[18px] font-light text-slate-500 mb-1">
+                {data.subtitle}
+              </span>
+            )}
+            <h2 className="block text-3xl font-bold text-slate-900 mb-6 tracking-tight leading-tight" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
+              {data.title}
+            </h2>
+          </div>
 
           <p className="text-base leading-relaxed text-slate-700 mb-8">
             {data.summary}

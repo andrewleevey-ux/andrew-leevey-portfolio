@@ -2,7 +2,8 @@ export const caseStudiesData = [
   {
     id: 1,
     slug: "checkout-delivery",
-    title: "Iterative CRO strategy: Checkout Delivery",
+    subtitle: "Iterative CRO strategy",
+    title: "Checkout Delivery",
     summary: "As the Lead Product Designer, I collaborated closely with my PM and key stakeholders to deliver tangible commercial value. By identifying targeted CRO testing opportunities within the checkout, we boosted the adoption of high-margin delivery options and drove a significant uplift in key metrics.",
     image: "/images/CRO_casestudy.jpg",
     highlights: [
@@ -16,6 +17,7 @@ export const caseStudiesData = [
   {
     id: 2,
     slug: "placeholder-2",
+    subtitle: "",
     title: "Data-Driven Design",
     summary: "Coming Soon",
     image: "/images/06-uxdoc-full.jpg",
@@ -25,6 +27,7 @@ export const caseStudiesData = [
   {
     id: 3,
     slug: "placeholder-3",
+    subtitle: "",
     title: "Service Ecosystems",
     summary: "Coming Soon",
     image: "/images/06-uxdoc-full.jpg",
