@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
 import { caseStudiesData } from "../../../data/caseStudiesData";
@@ -50,17 +51,30 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <main className="max-w-3xl mx-auto px-6 pt-[10vh] pb-[15vh]">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[10vh]"
+          className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[4vh]"
         >
           <ChevronLeft size={16} /> Back
         </Link>
 
-        <h1 className="text-5xl md:text-6xl font-normal text-slate-900 text-center mb-16" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
-          {data.title}
+        <Image
+          src="/images/CRO_casestudy.jpg"
+          alt={data.title}
+          width={1200}
+          height={675}
+          className="w-full aspect-video object-cover rounded-xl mb-12 shadow-sm"
+        />
+
+        <h1 className="mb-16 text-left">
+          <span className="block text-lg md:text-xl font-light text-slate-500 mb-2">
+            {data.subtitle}
+          </span>
+          <span className="block text-4xl md:text-5xl font-bold text-slate-900 mb-8" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            {data.title}
+          </span>
         </h1>
 
         <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
-          <p className="font-bold text-xl text-slate-800">
+          <p className="font-bold text-xl text-slate-800 text-left">
             The brief was simple: &quot;Simplify delivery.&quot; With peak trading fast approaching, we had to move quickly. Our goal was to reduce checkout friction and formulate high-impact CRO hypotheses to streamline the delivery experience before the busiest time of the year.
           </p>
 
