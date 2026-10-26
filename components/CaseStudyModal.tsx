@@ -53,7 +53,7 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
                 {data.subtitle}
               </span>
             )}
-            <h2 className="block text-3xl font-bold text-slate-900 mb-6 tracking-tight leading-tight" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
+            <h2 className="block text-3xl font-bold text-slate-900 mb-2 tracking-tight leading-tight" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
               {data.title}
             </h2>
           </div>
