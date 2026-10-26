@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
 import { caseStudiesData } from "../../../data/caseStudiesData";
@@ -55,8 +56,21 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <ChevronLeft size={16} /> Back
         </Link>
 
-        <h1 className="text-5xl md:text-6xl font-normal text-slate-900 text-center mb-16" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
-          {data.title}
+        <Image
+          src="/images/CRO_casestudy.jpg"
+          alt={data.title}
+          width={1200}
+          height={675}
+          className="w-full aspect-video object-cover rounded-xl mb-12 shadow-sm"
+        />
+
+        <h1 className="mb-16 text-center">
+          <span className="block text-lg md:text-xl font-light text-slate-500 mb-2">
+            {data.subtitle}
+          </span>
+          <span className="block text-4xl md:text-5xl font-bold text-slate-900 mb-8" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+            {data.title}
+          </span>
         </h1>
 
         <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
