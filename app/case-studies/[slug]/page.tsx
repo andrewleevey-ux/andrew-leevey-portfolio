@@ -64,7 +64,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           className="w-full aspect-video object-cover rounded-xl mb-12 shadow-sm"
         />
 
-        <h1 className="mb-16 text-center">
+        <h1 className="mb-16 text-left">
           <span className="block text-lg md:text-xl font-light text-slate-500 mb-2">
             {data.subtitle}
           </span>
@@ -74,7 +74,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         </h1>
 
         <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
-          <p className="font-bold text-xl text-slate-800">
+          <p className="font-bold text-xl text-slate-800 text-left">
             The brief was simple: &quot;Simplify delivery.&quot; With peak trading fast approaching, we had to move quickly. Our goal was to reduce checkout friction and formulate high-impact CRO hypotheses to streamline the delivery experience before the busiest time of the year.
           </p>
 
