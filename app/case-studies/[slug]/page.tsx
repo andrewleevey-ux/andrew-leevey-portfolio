@@ -51,7 +51,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <main className="max-w-3xl mx-auto px-6 pt-[10vh] pb-[15vh]">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[10vh]"
+          className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[4vh]"
         >
           <ChevronLeft size={16} /> Back
         </Link>
