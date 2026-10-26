@@ -23,7 +23,7 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl flex flex-col font-sans text-slate-900 leading-[1.15]"
+        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl flex flex-col font-sans text-slate-900 leading-[1.15]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button Hovering Over Image */}
@@ -36,9 +36,9 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
         </button>
 
         {/* Hero Image */}
-        <div className="relative w-full h-64 sm:h-80 md:h-96">
+        <div className="relative w-full aspect-video">
           <Image
-            src="/images/06-uxdoc-full.jpg"
+            src={data.image || "/images/06-uxdoc-full.jpg"}
             alt="Case Study Document"
             fill
             className="object-cover rounded-t-3xl"

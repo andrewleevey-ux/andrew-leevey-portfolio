@@ -93,8 +93,13 @@ export default function Home() {
             {/* Deep Dive Card 1 */}
             <div className="flex flex-col md:flex-row bg-white shadow-md border border-slate-200 rounded-3xl items-stretch overflow-hidden">
               <div className="w-full md:w-1/2 pt-8 pl-0 pb-0">
-                <div className="bg-emerald-400 rounded-tr-3xl rounded-tl-none rounded-b-none h-full min-h-[250px] w-full flex items-center justify-center text-white">
-                  <LayoutTemplate size={48} />
+                <div className="relative w-full h-full aspect-video min-h-[250px]">
+                  <Image
+                    src="/images/CRO_casestudy.jpg"
+                    alt="CRO Case Study"
+                    fill
+                    className="object-cover rounded-tr-3xl rounded-tl-none rounded-b-none"
+                  />
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
