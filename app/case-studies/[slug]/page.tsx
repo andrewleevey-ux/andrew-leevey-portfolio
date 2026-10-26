@@ -114,6 +114,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </section>
 
           <section>
+            <div className="w-screen relative left-1/2 -translate-x-1/2 my-[6vh]">
+              <Image
+                src="/images/SUXD 2.0 - Checkout delivery flow.jpg"
+                alt="Getting started: WTF??"
+                width={10171}
+                height={3902}
+                className="w-full h-auto"
+              />
+            </div>
             <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Getting started: WTF?? (What&apos;s the Flow?)
             </h2>
@@ -205,7 +214,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </p>
 
             <h3 className="text-2xl font-bold text-slate-800 mb-4">Hypothesis 1</h3>
-            <div className="w-full h-[400px] bg-slate-200 rounded-xl flex items-center justify-center text-slate-400 mb-8">Image Placeholder</div>
+            <div className="w-screen relative left-1/2 -translate-x-1/2 my-[6vh]">
+              <Image
+                src="/images/InPost Exp - Iterative CRO strategy.jpg"
+                alt="Hypothesis 1"
+                width={10289}
+                height={3857}
+                className="w-full h-auto"
+              />
+            </div>
 
             <h3 className="text-2xl font-bold text-slate-800 mb-4">Hypothesis 2</h3>
             <p className="mb-4">
