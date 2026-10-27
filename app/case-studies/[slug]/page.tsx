@@ -64,20 +64,20 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           className="w-full aspect-video object-cover rounded-xl mb-12 shadow-sm"
         />
 
-        <h1 className="mb-16 text-left">
+        <h1 className="mb-8 text-left">
           <span className="block text-lg md:text-xl font-light text-slate-500 mb-2">
             {data.subtitle}
           </span>
-          <span className="block text-4xl md:text-5xl font-bold text-slate-900 mb-8" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
+          <span className="block text-4xl md:text-5xl font-bold text-slate-900" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
             {data.title}
           </span>
         </h1>
 
-        <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
-          <p className="font-bold text-xl text-slate-800 text-left">
-            The brief was simple: &quot;Simplify delivery.&quot; With peak trading fast approaching, we had to move quickly. Our goal was to reduce checkout friction and formulate high-impact CRO hypotheses to streamline the delivery experience before the busiest time of the year.
-          </p>
+        <p className="font-bold text-xl text-slate-800 text-left mb-12">
+          The brief was simple: &quot;Simplify delivery.&quot; With peak trading fast approaching, we had to move quickly. Our goal was to reduce checkout friction and formulate high-impact CRO hypotheses to streamline the delivery experience before the busiest time of the year.
+        </p>
 
+        <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
           <section>
             <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Outcomes overview
