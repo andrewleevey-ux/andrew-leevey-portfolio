@@ -114,7 +114,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </section>
 
           <section>
-            <div className="w-screen relative left-1/2 -translate-x-1/2 my-[6vh]">
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 my-[6vh] px-4 md:px-0">
               <Image
                 src="/images/SUXD 2.0 - Checkout delivery flow.jpg"
                 alt="Getting started: WTF??"
@@ -214,7 +214,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </p>
 
             <h3 className="text-2xl font-bold text-slate-800 mb-4">Hypothesis 1</h3>
-            <div className="w-screen relative left-1/2 -translate-x-1/2 my-[6vh]">
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 my-[6vh] px-4 md:px-0">
               <Image
                 src="/images/InPost Exp - Iterative CRO strategy.jpg"
                 alt="Hypothesis 1"
