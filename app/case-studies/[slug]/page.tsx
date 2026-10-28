@@ -234,7 +234,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 alt="Figma Exploration"
                 width={1715}
                 height={905}
-                className="w-full h-auto"
+                className="w-full h-auto object-contain"
               />
             </div>
           </section>
