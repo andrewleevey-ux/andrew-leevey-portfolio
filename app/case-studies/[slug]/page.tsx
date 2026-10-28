@@ -231,7 +231,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </section>
 
           <div>
-            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 mt-[6vh] mb-8 px-4 md:px-0">
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 mt-12 mb-16 px-4 md:px-0">
               <Image
                 src="/images/straighttofigma_01.png"
                 alt="Figma Exploration"
