@@ -226,9 +226,17 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
             <h3 className="text-2xl font-bold text-slate-800 mb-4">Hypothesis 2</h3>
             <p className="mb-4">
-              &quot;As this was a lower-risk and much smaller update, we decided we didn’t need to break the solution down any further. With this in mind, to save time on this particular update, I opted to head straight into Figma.&quot;
+              As this was a lower-risk and much smaller update, we decided we didn’t need to break the solution down any further. With this in mind, to save time on this particular update, I opted to head straight into Figma.
             </p>
-            <div className="w-full h-[400px] bg-slate-200 rounded-xl flex items-center justify-center text-slate-400">Image Placeholder</div>
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 my-[6vh] px-4 md:px-0">
+              <Image
+                src="/images/straighttofigma_01.png"
+                alt="Figma Exploration"
+                width={1715}
+                height={905}
+                className="w-full h-auto"
+              />
+            </div>
           </section>
 
           <section>
