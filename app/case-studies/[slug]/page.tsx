@@ -172,7 +172,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               During the session, it became obvious that the promotional banner was a primary target for investigation. We also noticed its backend logic was causing it to jump around depending on the basket type.
             </p>
 
-            <div className="border-l-2 border-purple-900 bg-purple-100 p-6 rounded-r-md shadow-sm mb-4">
+            <div className="border-l-4 border-purple-900 bg-purple-100 p-6 rounded-r-md shadow-sm my-12">
               <strong className="block text-purple-900 font-semibold mb-2">Quick aside</strong>
               <p className="text-slate-700 italic text-sm md:text-base">
                 This exact moment highlights why having the full squad involved early is so crucial. Having QA in the room meant we could map out complex scenarios and edge cases upfront, saving us from painful rework later down the line.
@@ -235,10 +235,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Outtakes & Exploration
             </h2>
-            <p className="mb-4">
-              One of the reasons I love working in Miro is that it removes all constraints from my thinking and allows me to ideate at pace. And as we all know... not all ideas are winners!
-            </p>
-            <div className="w-full h-[400px] bg-slate-200 rounded-xl flex items-center justify-center text-slate-400 mb-8">Image Placeholder</div>
+            <div className="border-l-4 border-purple-900 bg-purple-100 p-6 rounded-r-md shadow-sm my-12">
+              <strong className="block text-purple-900 font-semibold mb-2">Quick aside</strong>
+              <p className="text-slate-700 italic text-sm md:text-base">
+                One of the reasons I love working in Miro is that it removes all constraints from my thinking and allows me to ideate at pace. And as we all know... not all ideas are winners!
+              </p>
+            </div>
             <p>
               After some rapid, focused ideation, I had a clear vision and direction for our two hypotheses. The Figma files were polished and ready for a final review and handover session with our developers.
             </p>
