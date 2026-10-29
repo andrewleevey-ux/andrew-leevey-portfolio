@@ -228,7 +228,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             <p className="mb-4">
               As this was a lower-risk and much smaller update, we decided we didn’t need to break the solution down any further. With this in mind, to save time on this particular update, I opted to head straight into Figma.
             </p>
-            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 my-[6vh] px-4 md:px-0">
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 h-fit mt-12 mb-16 px-4 md:px-0">
               <Image
                 src="/images/straighttofigma_01.png"
                 alt="Figma Exploration"
@@ -243,15 +243,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             <h2 className="text-slate-900 mb-6" style={{ fontSize: "56px", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.15 }}>
               Outtakes & Exploration
             </h2>
+            <p>
+              After some rapid, focused ideation, I had a clear vision and direction for our two hypotheses. The Figma files were polished and ready for a final review and handover session with our developers.
+            </p>
             <div className="border-l-4 border-purple-900 bg-purple-100 p-6 rounded-r-md shadow-sm my-12">
               <strong className="block text-purple-900 font-semibold mb-2">Quick aside</strong>
               <p className="text-slate-700 italic text-sm md:text-base">
                 One of the reasons I love working in Miro is that it removes all constraints from my thinking and allows me to ideate at pace. And as we all know... not all ideas are winners!
               </p>
             </div>
-            <p>
-              After some rapid, focused ideation, I had a clear vision and direction for our two hypotheses. The Figma files were polished and ready for a final review and handover session with our developers.
-            </p>
           </section>
 
           <section>
