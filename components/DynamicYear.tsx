@@ -10,5 +10,5 @@ export default function DynamicYear() {
     setYear(new Date().getFullYear());
   }, []);
 
-  return <p>© {year} Andrew Leevey. All rights reserved.</p>;
+  return <p className="w-full text-center">© {year} Andrew Leevey. All rights reserved.</p>;
 }
