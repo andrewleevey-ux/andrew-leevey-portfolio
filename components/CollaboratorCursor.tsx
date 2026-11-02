@@ -82,7 +82,7 @@ export default function CollaboratorCursor({
           </svg>
         </motion.div>
         <div
-          className="absolute top-6 left-5 text-white text-xs font-semibold px-2 py-0.5 rounded shadow-sm whitespace-nowrap"
+          className="absolute top-6 left-5 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm whitespace-nowrap"
           style={{ backgroundColor: color }}
         >
           {name} ({role})

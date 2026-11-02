@@ -80,10 +80,10 @@ export default function Home() {
             role="Developer"
             color="#9823F8"
             pathCoordinates={{
-              x: [0, 600, 600, -200, -200, 400, 400, 0],
-              y: [0, 80, 80, -50, -50, 120, 120, 0],
+              x: [0, -25, -25, 1105, 1105, 1100, 1100, -15],
+              y: [0, 140, 140, 90, 90, 320, 320, 260],
             }}
-            initialPosition={{ top: "20%", left: "50%" }}
+            initialPosition={{ top: "15%", left: "-7rem" }}
             delay={2}
           />}
           <div className="flex items-center justify-center mb-12">
