@@ -166,7 +166,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               I usually get the ball rolling by walking through any qualitative or quantitative data we already have, along with my own early observations. This frames the activity and gives the team time to process the insights before we dive in.
             </p>
 
-            <div className="w-full h-[400px] bg-slate-200 rounded-xl flex items-center justify-center text-slate-400 mb-8">Image Placeholder</div>
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 h-fit my-[6vh] px-4 md:px-0">
+              <Image
+                src="/images/teamteardown.png"
+                alt="Live example - Team Teardown Miro board"
+                width={1051}
+                height={836}
+                className="w-full h-auto"
+              />
+            </div>
 
             <p className="mb-4">
               During the session, it became obvious that the promotional banner was a primary target for investigation. We also noticed its backend logic was causing it to jump around depending on the basket type.
