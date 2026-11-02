@@ -1,0 +1,1 @@
+GIT WORKFLOW: Never commit or push directly to the main branch. For every task: 1. Create a new branch (git checkout -b feature/[task-name]). 2. Commit the changes. 3. Push the branch to origin. 4. Output the direct GitHub URL to open a Pull Request. Stop and wait for manual review before proceeding.
