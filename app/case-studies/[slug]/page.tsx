@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
+import CaseStudyBottomNav from "../../../components/CaseStudyBottomNav";
 import { caseStudiesData } from "../../../data/caseStudiesData";
 import { notFound } from "next/navigation";
 
@@ -39,6 +40,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               {data.pageContent}
             </p>
           </div>
+          <CaseStudyBottomNav />
         </main>
       </div>
     );
@@ -288,6 +290,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </p>
           </section>
         </div>
+
+        <CaseStudyBottomNav />
       </main>
     </div>
   );
