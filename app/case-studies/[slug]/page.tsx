@@ -61,8 +61,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         <Image
           src="/images/CRO_casestudy.jpg"
           alt={data.title}
-          width={1200}
-          height={675}
+          width={2400}
+          height={1350}
           className="w-full aspect-video object-cover rounded-xl mb-12 shadow-sm"
         />
 
@@ -76,7 +76,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         </h1>
 
         <p className="font-bold text-xl text-slate-800 text-left mb-12">
-          The brief was simple: &quot;Simplify delivery.&quot; With peak trading fast approaching, we had to move quickly. Our goal was to reduce checkout friction and formulate high-impact CRO hypotheses to streamline the delivery experience before the busiest time of the year.
+          The brief was simple: Simplify delivery. With peak trading fast approaching, we had to move quickly. Our goal was to reduce checkout friction and formulate high-impact CRO hypotheses to streamline the delivery experience before the busiest time of the year.
         </p>
 
         <div className="text-slate-600 text-lg leading-relaxed flex flex-col gap-y-[8vh] md:gap-y-[12vh]">
@@ -91,7 +91,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   <li>Drive adoption of higher-margin delivery options (e.g., Next Day delivery)</li>
                   <li>Formulate testable, data-backed hypotheses</li>
                   <li>Deliver at pace to support upcoming peak trading</li>
-                  <li>Apply a Lean UX &quot;test and learn&quot; methodology</li>
+                  <li>Apply a Lean UX test and learn methodology</li>
                 </ul>
               </div>
               <div>
@@ -162,7 +162,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               Team Teardowns
             </h2>
             <p className="mb-4">
-              Another essential tool in my lean discovery kit is what I call &quot;Team Teardowns&quot;. This simply brings the core squad together: QA, developers, delivery managers, PMs, and key stakeholders. Getting everyone involved early provides an invaluable perspective.
+              Another essential tool in my lean discovery kit is what I call Team Teardowns. This simply brings the core squad together: QA, developers, delivery managers, PMs, and key stakeholders. Getting everyone involved early provides an invaluable perspective.
             </p>
             <p className="mb-8">
               I usually get the ball rolling by walking through any qualitative or quantitative data we already have, along with my own early observations. This frames the activity and gives the team time to process the insights before we dive in.
@@ -170,10 +170,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
             <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 h-fit my-[6vh] px-4 md:px-0">
               <Image
-                src="/images/teamteardown.png"
+                src="/images/teamteardown_deliverypage.png"
                 alt="Live example - Team Teardown Miro board"
-                width={1051}
-                height={836}
+                width={1628}
+                height={546}
+                sizes="(max-width: 1024px) 100vw, 1024px"
                 className="w-full h-auto"
               />
             </div>
@@ -220,7 +221,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               Design time: Wireframes
             </h2>
             <p className="mb-8">
-              &quot;Using Miro, I quickly ideated towards the future vision of the delivery selection. I then iteratively broke it down into testable chunks to reduce risk and dev effort.&quot;
+              Using Miro, I quickly ideated towards the future vision of the delivery selection. I then iteratively broke it down into testable chunks to reduce risk and dev effort.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-800 mb-4">Hypothesis 1</h3>
@@ -269,10 +270,28 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               The Results
             </h2>
             <h3 className="text-2xl font-bold text-slate-800 mb-4">CRO: Hypothesis 1</h3>
-            <div className="w-full h-[400px] bg-slate-200 rounded-xl flex items-center justify-center text-slate-400 mb-8">Image Placeholder</div>
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 h-fit my-[6vh] px-4 md:px-0">
+              <Image
+                src="/images/Results_hypo_1.png"
+                alt="CRO: Hypothesis 1 Results"
+                width={1440}
+                height={800}
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="w-full h-auto"
+              />
+            </div>
 
             <h3 className="text-2xl font-bold text-slate-800 mb-4">CRO: Hypothesis 2</h3>
-            <div className="w-full h-[400px] bg-slate-200 rounded-xl flex items-center justify-center text-slate-400">Image Placeholder</div>
+            <div className="w-[100vw] max-w-5xl relative left-1/2 -translate-x-1/2 h-fit mt-[6vh] px-4 md:px-0">
+              <Image
+                src="/images/Results_hypo_2.png"
+                alt="CRO: Hypothesis 2 Results"
+                width={1440}
+                height={800}
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="w-full h-auto"
+              />
+            </div>
           </section>
 
           <section>
@@ -286,7 +305,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               But working lean also means knowing when to trust your data-backed intuition. We didn&apos;t want to get bogged down in endless testing cycles for every single update. For Hypothesis 2, the data and our teardown insights were so clear that we had the confidence to make a slightly bigger, direct change without needing to slice it down further.
             </p>
             <p>
-              Because of this balanced approach, both winning experiments moved straight into the engineering implementation track—delivering a simplified customer experience right when the business needed it most.
+              Because of this balanced approach, both winning experiments moved straight into the engineering implementation track, delivering a simplified customer experience right when the business needed it most.
             </p>
           </section>
         </div>
