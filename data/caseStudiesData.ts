@@ -8,7 +8,7 @@ export const caseStudiesData = [
     image: "/images/CRO_casestudy.jpg",
     highlights: [
       "Led end-to-end discovery and stakeholder alignment",
-      "Applied a Lean UX \"test and learn\" methodology",
+      "Applied a Lean UX test and learn methodology",
       "Increased conversion rate on the delivery page",
       "Winning experiment moved directly into implementation"
     ],
