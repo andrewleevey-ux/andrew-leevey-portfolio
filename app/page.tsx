@@ -35,11 +35,11 @@ export default function Home() {
               height={140}
               className="absolute -top-6 left-[-60px] md:left-[-160px] w-[120px] md:w-[140px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)] z-10"
             />
-            <div className="relative inline-block border-2 border-blue-500 p-2">
-              <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-white border-2 border-blue-500" />
-              <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-white border-2 border-blue-500" />
-              <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-white border-2 border-blue-500" />
-              <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-white border-2 border-blue-500" />
+            <div className="relative inline-block border-[3px] border-black p-2">
+              <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-white border-[3px] border-black" />
+              <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-white border-[3px] border-black" />
+              <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-white border-[3px] border-black" />
+              <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-white border-[3px] border-black" />
               <span className="font-handwriting font-bold text-blue-600 text-8xl md:text-[8.5rem] lg:text-[10.5rem]">Andrew Leevey</span>
             </div> <br className="hidden sm:block" />
             <span className="text-2xl md:text-3xl font-medium text-slate-800 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer & CRO specialist</span>
