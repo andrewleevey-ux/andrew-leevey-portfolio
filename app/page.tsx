@@ -7,15 +7,16 @@ import CollaboratorCursor from "../components/CollaboratorCursor";
 import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
 import CaseStudyModal from "../components/CaseStudyModal";
+import ScrollSection from "../components/ScrollSection";
 
 export default function Home() {
   const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null);
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
       <GuestCursor />
-      <main className="max-w-5xl mx-auto px-6 pt-20 pb-24">
+      <main className="max-w-5xl mx-auto px-6 pb-24">
         {/* Hero Section */}
-        <section className="relative w-full mb-[10vh] md:mb-[15vh] flex flex-col items-center text-center">
+        <ScrollSection className="relative w-full min-h-[100svh] flex flex-col justify-center items-center text-center py-24">
           {!activeCaseStudy && <CollaboratorCursor
             name="Andrew"
             role="Lead"
@@ -26,7 +27,7 @@ export default function Home() {
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
           />}
-          <h1 className="tracking-tight mb-16 relative inline-block">
+          <h1 className="w-full max-w-4xl mx-auto tracking-tight mb-16 relative">
             <Image
               src="/images/startflag.svg"
               alt="Start Flag"
@@ -46,10 +47,10 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* Lean Product Process Section */}
-        <section className="mb-[10vh] md:mb-[15vh]">
+        <ScrollSection className="py-24 md:py-32">
           <div className="flex flex-col items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>My Lean Process</h2>
             <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">Using the Double Diamond framework</h3>
@@ -71,10 +72,10 @@ export default function Home() {
               className="absolute top-1 lg:-top-6 right-8 md:-right-8 lg:-right-12 z-10 w-[70px] md:w-[120px] h-auto rotate-12 drop-shadow-[3px_5px_8px_rgba(0,0,0,0.15)]"
             />
           </div>
-        </section>
+        </ScrollSection>
 
         {/* Deep Dive Section */}
-        <section className="max-w-6xl mx-auto mb-[10vh] md:mb-[15vh] relative">
+        <ScrollSection className="max-w-6xl mx-auto py-24 md:py-32 relative">
           {!activeCaseStudy && <CollaboratorCursor
             name="Mike"
             role="Developer"
@@ -149,10 +150,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* Testimonials Section */}
-        <section className="relative mb-[10vh] md:mb-[15vh] z-40">
+        <ScrollSection className="relative py-24 md:py-32 z-40">
           {!activeCaseStudy && <CollaboratorCursor
             name="Lis"
             role="UX manager"
@@ -284,11 +285,11 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
 
         {/* Experience Section */}
-        <section id="experience" className="max-w-6xl mx-auto px-6 mb-[10vh] md:mb-[15vh]">
+        <ScrollSection id="experience" className="max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="flex flex-col items-center justify-center mb-16">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>
               Experience
@@ -378,11 +379,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
 
         {/* Case Studies Section */}
-        <section id="work" className="mb-[10vh] md:mb-[15vh]">
+        <ScrollSection id="work" className="py-24 md:py-32">
           <div className="flex items-center justify-center mb-12">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
           </div>
@@ -430,10 +431,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* About Me Section */}
-        <section id="about" className="max-w-6xl mx-auto mt-[10vh] md:mt-[15vh] mb-[10vh] md:mb-[15vh] relative">
+        <ScrollSection id="about" className="max-w-6xl mx-auto py-24 md:py-32 relative">
           <div className="flex flex-col items-center justify-center mb-16">
             <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>About me</h2>
             <h3 className="text-lg text-slate-600 text-center mt-2">Who am I?</h3>
@@ -456,7 +457,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </ScrollSection>
         <CaseStudyModal activeCaseStudy={activeCaseStudy} onClose={() => setActiveCaseStudy(null)} />
       </main>
 
