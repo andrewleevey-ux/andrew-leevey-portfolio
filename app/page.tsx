@@ -47,7 +47,7 @@ export default function Home() {
               <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-sky-400" />
               <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-sky-400" />
               <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-sky-400" />
-              <h1 className={`${archivoBlack.className} text-[7rem] uppercase tracking-tight text-slate-900 leading-none`}>
+              <h1 className={`${archivoBlack.className} text-[10rem] uppercase tracking-tight text-slate-900 leading-none`}>
                 ANDY LEEVEY
               </h1>
             </div>
