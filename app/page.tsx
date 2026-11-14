@@ -27,7 +27,7 @@ export default function Home() {
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
           />}
-          <h1 className="w-full max-w-4xl mx-auto tracking-tight mb-16 relative">
+          <h1 className="w-full max-w-5xl mx-auto tracking-tight mb-16 relative">
             <Image
               src="/images/startflag.svg"
               alt="Start Flag"
@@ -35,7 +35,13 @@ export default function Home() {
               height={140}
               className="absolute -top-6 left-[-60px] md:left-[-160px] w-[120px] md:w-[140px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)] z-10"
             />
-            <span className="font-handwriting font-bold text-blue-600 text-8xl md:text-[8rem] lg:text-[10rem]">Andrew Leevey</span> <br className="hidden sm:block" />
+            <div className="relative inline-block border-[3px] border-black p-2">
+              <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-white border-[3px] border-black" />
+              <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-white border-[3px] border-black" />
+              <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-white border-[3px] border-black" />
+              <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-white border-[3px] border-black" />
+              <span className="font-handwriting font-bold text-blue-600 text-8xl md:text-[8.5rem] lg:text-[10.5rem]">Andrew Leevey</span>
+            </div> <br className="hidden sm:block" />
             <span className="text-2xl md:text-3xl font-medium text-slate-800 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer & CRO specialist</span>
           </h1>
           <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl max-w-3xl mx-auto text-left">
