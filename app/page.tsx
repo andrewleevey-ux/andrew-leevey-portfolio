@@ -38,16 +38,16 @@ export default function Home() {
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
           />}
-          <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center mb-12">
+          <div className="w-max flex flex-col items-center justify-center mb-12">
             <span className={`${justMeAgainDownHere.className} text-4xl md:text-5xl text-slate-700 mb-2`}>
               Portfolio of
             </span>
-            <div className="relative inline-block border border-sky-400 px-6 py-3">
+            <div className="relative inline-block w-max border border-sky-400 px-6 py-3">
               <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-sky-400" />
               <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-sky-400" />
               <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-sky-400" />
               <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-sky-400" />
-              <h1 className={`${archivoBlack.className} text-[10rem] uppercase tracking-tight text-slate-900 leading-none`}>
+              <h1 className={`${archivoBlack.className} text-[10rem] whitespace-nowrap uppercase tracking-tight text-slate-900 leading-none`}>
                 ANDY LEEVEY
               </h1>
             </div>
