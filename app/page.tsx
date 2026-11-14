@@ -3,11 +3,22 @@
 import { useState } from "react";
 import { Truck, LineChart, LayoutTemplate, ArrowRight, Users, Link as LinkIcon, Download } from "lucide-react";
 import Image from "next/image";
+import { Archivo_Black, Just_Me_Again_Down_Here } from "next/font/google";
 import CollaboratorCursor from "../components/CollaboratorCursor";
 import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
 import CaseStudyModal from "../components/CaseStudyModal";
 import ScrollSection from "../components/ScrollSection";
+
+const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const justMeAgainDownHere = Just_Me_Again_Down_Here({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Home() {
   const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null);
@@ -27,27 +38,27 @@ export default function Home() {
             }}
             initialPosition={{ top: "-20px", left: "80%" }}
           />}
-          <h1 className="w-full max-w-5xl mx-auto tracking-tight mb-16 relative">
-            <Image
-              src="/images/startflag.svg"
-              alt="Start Flag"
-              width={140}
-              height={140}
-              className="absolute -top-6 left-[-60px] md:left-[-160px] w-[120px] md:w-[140px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)] z-10"
-            />
-            <div className="relative inline-block border-[3px] border-black p-2">
-              <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-white border-[3px] border-black" />
-              <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-white border-[3px] border-black" />
-              <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-white border-[3px] border-black" />
-              <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-white border-[3px] border-black" />
-              <span className="font-handwriting font-bold text-blue-600 text-8xl md:text-[8.5rem] lg:text-[10.5rem]">Andrew Leevey</span>
-            </div> <br className="hidden sm:block" />
-            <span className="text-2xl md:text-3xl font-medium text-slate-800 block mt-4" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>Lead Product Designer & CRO specialist</span>
-          </h1>
-          <div className="flex flex-col md:flex-row items-center gap-6 p-8 bg-[#f9f3c6] border-2 border-amber-300 rounded-3xl max-w-3xl mx-auto text-left">
+          <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center mb-12">
+            <span className={`${justMeAgainDownHere.className} text-4xl md:text-5xl text-slate-700 mb-2`}>
+              Portfolio of
+            </span>
+            <div className="relative inline-block border border-sky-400 px-6 py-3">
+              <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-sky-400" />
+              <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-sky-400" />
+              <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-sky-400" />
+              <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-sky-400" />
+              <h1 className={`${archivoBlack.className} text-6xl md:text-8xl uppercase tracking-tight text-slate-900 leading-none`}>
+                ANDY LEEVEY
+              </h1>
+            </div>
+            <p className="font-sans text-2xl md:text-3xl font-medium text-slate-800 mt-6" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>
+              Lead Product Designer & CRO specialist
+            </p>
+          </div>
+          <div className="flex flex-row items-center gap-6 p-8 bg-yellow-100 border-2 border-amber-300 rounded-3xl max-w-3xl mx-auto text-left">
             <Image src="/images/lightbbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
             <div>
-              <h3 className="text-3xl font-semibold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">About me...</h3>
+              <h3 className="text-2xl font-bold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">ABOUT ME</h3>
               <p className="text-slate-800 text-base leading-relaxed">
                 I am a lead level product Designer who operates as a commercial advisor. I focus on translating complex business logic into simple, frictionless user journeys that directly improve conversion and retention.
               </p>
