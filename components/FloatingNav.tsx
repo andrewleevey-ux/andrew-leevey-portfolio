@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Home, Briefcase, FileText, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -18,12 +17,12 @@ export default function FloatingNav() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md w-full border-b border-gray-100">
+    <nav className="sticky top-4 z-50 bg-white rounded-2xl max-w-5xl mx-auto shadow-md border border-gray-100">
       <div className="flex justify-between items-center py-4 px-6 md:px-12">
         <Link
           href="/"
           onClick={handleHomeClick}
-          className="font-[family-name:var(--font-archivo-black)] text-2xl md:text-3xl uppercase tracking-tight text-slate-900 hover:text-blue-600 transition-colors"
+          className="font-[family-name:var(--font-archivo-black)] text-2xl md:text-3xl uppercase tracking-tight text-slate-900"
           style={{ fontFamily: "var(--font-archivo-black)" }}
         >
           AL
@@ -33,27 +32,27 @@ export default function FloatingNav() {
           <Link
             href="/"
             onClick={handleHomeClick}
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <Home size={18} /> Home
+            Home
           </Link>
           <Link
             href="/#work"
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <Briefcase size={18} /> Work
+            Work
           </Link>
           <Link
             href="/#cv"
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <FileText size={18} /> CV
+            CV
           </Link>
           <Link
             href="#about"
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <User size={18} /> About
+            About
           </Link>
         </div>
 
@@ -71,34 +70,34 @@ export default function FloatingNav() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4 shadow-md">
+        <div className="md:hidden bg-white rounded-b-2xl border-t border-gray-100 px-6 py-4 flex flex-col gap-2">
           <Link
             href="/"
             onClick={handleHomeClick}
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors py-1"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <Home size={18} /> Home
+            Home
           </Link>
           <Link
             href="/#work"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors py-1"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <Briefcase size={18} /> Work
+            Work
           </Link>
           <Link
             href="/#cv"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors py-1"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <FileText size={18} /> CV
+            CV
           </Link>
           <Link
             href="#about"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors py-1"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
           >
-            <User size={18} /> About
+            About
           </Link>
         </div>
       )}
