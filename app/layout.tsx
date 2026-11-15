@@ -38,9 +38,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${caveat.variable} ${archivoBlack.variable} ${justMeAgainDownHere.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-slate-50 dot-grid cursor-none">
-        <FloatingNav />
+      <body className="min-h-full flex flex-col cursor-none">
         {children}
+        <FloatingNav />
       </body>
     </html>
   );

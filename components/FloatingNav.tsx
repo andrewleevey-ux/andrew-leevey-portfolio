@@ -17,8 +17,8 @@ export default function FloatingNav() {
   };
 
   return (
-    <nav className="sticky top-4 z-50 bg-white rounded-2xl max-w-5xl mx-auto shadow-md border border-gray-100">
-      <div className="flex justify-between items-center py-4 px-6 md:px-12">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl bg-white rounded-2xl shadow-md px-8 py-3">
+      <div className="flex justify-between items-center w-full">
         <Link
           href="/"
           onClick={handleHomeClick}
@@ -28,7 +28,7 @@ export default function FloatingNav() {
           AL
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-4">
           <Link
             href="/"
             onClick={handleHomeClick}
@@ -70,7 +70,7 @@ export default function FloatingNav() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white rounded-b-2xl border-t border-gray-100 px-6 py-4 flex flex-col gap-2">
+        <div className="md:hidden bg-white border-t border-gray-100 mt-3 pt-3 flex flex-col gap-2">
           <Link
             href="/"
             onClick={handleHomeClick}
