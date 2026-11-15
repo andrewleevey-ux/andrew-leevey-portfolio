@@ -51,16 +51,15 @@ export default function AboutMeSection() {
 
   return (
     <ScrollSection className="flex flex-col justify-between min-h-screen py-12 px-8">
-      <div className="w-full flex justify-start">
-        <Image
-          src="/images/high5smile.png"
-          alt="High-five smile"
-          width={120}
-          height={120}
-        />
-      </div>
-
-      <div className="flex-1 flex flex-col items-center justify-center w-full">
+      <div className="flex-1 flex flex-col items-center justify-center max-w-4xl w-full mx-auto">
+        <div className="w-full flex justify-start mb-4 md:mb-8">
+          <Image
+            src="/images/high5smile.png"
+            alt="High-five smile"
+            width={120}
+            height={120}
+          />
+        </div>
         <h2
           className={`${archivoBlack.className} text-black text-5xl md:text-[80px] uppercase leading-none text-center w-full mb-12`}
         >
