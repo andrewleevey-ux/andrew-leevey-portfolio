@@ -9,6 +9,7 @@ import GuestCursor from "../components/GuestCursor";
 import DynamicYear from "../components/DynamicYear";
 import CaseStudyModal from "../components/CaseStudyModal";
 import ScrollSection from "../components/ScrollSection";
+import AboutMeSection from "../components/AboutMeSection";
 
 const archivoBlack = Archivo_Black({
   subsets: ["latin"],
@@ -55,16 +56,10 @@ export default function Home() {
               Lead Product Designer & CRO specialist
             </p>
           </div>
-          <div className="flex flex-row items-center gap-6 p-8 bg-yellow-100 border-2 border-amber-300 rounded-3xl max-w-3xl mx-auto text-left">
-            <Image src="/images/lightbbulb.png" alt="Lightbulb" width={120} height={120} className="shrink-0" />
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 tracking-[-0.03em] leading-[1.15] mb-3">ABOUT ME</h3>
-              <p className="text-slate-800 text-base leading-relaxed">
-                I am a lead level product Designer who operates as a commercial advisor. I focus on translating complex business logic into simple, frictionless user journeys that directly improve conversion and retention.
-              </p>
-            </div>
-          </div>
         </ScrollSection>
+
+        {/* Scroll-Reveal About Me Section */}
+        <AboutMeSection />
 
         {/* Lean Product Process Section */}
         <ScrollSection className="py-24 md:py-32">
