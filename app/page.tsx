@@ -69,7 +69,7 @@ export default function Home() {
         {/* Lean Product Process Section */}
         <ScrollSection className="py-24 md:py-32">
           <div className="flex flex-col items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>My Lean Process</h2>
+            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[100px] leading-none text-center w-full`}>My Lean Process</h2>
             <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">Using the Double Diamond framework</h3>
           </div>
           <div className="-mx-6 md:-mx-16 lg:-mx-32 relative overflow-visible">
@@ -105,7 +105,7 @@ export default function Home() {
             delay={2}
           />}
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Case Studies</h2>
+            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[100px] leading-none text-center w-full`}>Case Studies</h2>
           </div>
           <div className="flex flex-col gap-12">
             {/* Deep Dive Card 1 */}
@@ -191,7 +191,7 @@ export default function Home() {
                 height={120}
                 className="absolute -top-6 left-[-60px] md:left-[-160px] z-10 w-[70px] md:w-[120px] -rotate-12 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.15)]"
               />
-              <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>What people say</h2>
+              <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[100px] leading-none text-center w-full`}>What people say</h2>
             </div>
           </div>
 
@@ -308,7 +308,7 @@ export default function Home() {
         {/* Experience Section */}
         <ScrollSection id="experience" className="max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="flex flex-col items-center justify-center mb-16">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>
+            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[100px] leading-none text-center w-full`}>
               Experience
             </h2>
             <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">
@@ -402,7 +402,7 @@ export default function Home() {
         {/* Case Studies Section */}
         <ScrollSection id="work" className="py-24 md:py-32">
           <div className="flex items-center justify-center mb-12">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Placeholder Title</h2>
+            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[100px] leading-none text-center w-full`}>Placeholder Title</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -453,7 +453,7 @@ export default function Home() {
         {/* About Me Section */}
         <ScrollSection id="about" className="max-w-6xl mx-auto py-24 md:py-32 relative">
           <div className="flex flex-col items-center justify-center mb-16">
-            <h2 className="font-sans text-slate-900 text-center w-full" style={{ fontSize: '56px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>About me</h2>
+            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[100px] leading-none text-center w-full`}>About me</h2>
             <h3 className="text-lg text-slate-600 text-center mt-2">Who am I?</h3>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 mt-8">
