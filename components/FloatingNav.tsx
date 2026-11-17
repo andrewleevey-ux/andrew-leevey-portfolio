@@ -17,7 +17,7 @@ export default function FloatingNav() {
   };
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl bg-white rounded-2xl shadow-md px-8 py-3">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl mx-auto bg-white border border-gray-200 rounded-full shadow-lg px-8 py-3">
       <div className="flex justify-between items-center w-full">
         <Link
           href="/"
