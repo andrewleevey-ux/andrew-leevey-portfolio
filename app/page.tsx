@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Truck, LineChart, LayoutTemplate, ArrowRight, Users, Link as LinkIcon, Download } from "lucide-react";
+import { Truck, LineChart, ArrowRight, Users, Link as LinkIcon, Download } from "lucide-react";
 import Image from "next/image";
 import { Archivo_Black, Just_Me_Again_Down_Here } from "next/font/google";
 import CollaboratorCursor from "../components/CollaboratorCursor";
@@ -388,58 +388,6 @@ export default function Home() {
             <div className="flex justify-center mt-12 relative z-10">
               <div className="bg-[#FFDD33] p-6 rounded shadow-md shadow-black/10 -rotate-3 text-center">
                 <div className="font-bold text-slate-900">My next challenge?</div>
-              </div>
-            </div>
-          </div>
-        </ScrollSection>
-
-
-        {/* Case Studies Section */}
-        <ScrollSection id="work" className="py-24 md:py-32">
-          <div className="flex items-center justify-center mb-12">
-            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[80px] uppercase leading-none text-center w-full`}>Placeholder Title</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="group bg-yellow-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square -rotate-2">
-              <div className="w-12 h-12 bg-yellow-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
-                <Truck size={24} />
-              </div>
-              <h4 className="text-xl font-medium text-slate-900 mb-3" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>2-Person Delivery</h4>
-              <p className="text-slate-700 leading-relaxed flex-grow">
-                Mapping the end-to-end journey connecting the digital checkout to physical door-drop logistics.
-              </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer" onClick={() => setActiveCaseStudy("checkout-delivery")}>
-                View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group bg-blue-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square rotate-1">
-              <div className="w-12 h-12 bg-blue-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
-                <LineChart size={24} />
-              </div>
-              <h4 className="text-xl font-medium text-slate-900 mb-3" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>CRO Strategy</h4>
-              <p className="text-slate-700 leading-relaxed flex-grow">
-                Running rapid, hypothesis-driven testing cycles to de-risk delivery and lift online revenue.
-              </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer" onClick={() => setActiveCaseStudy("placeholder-2")}>
-                View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group bg-pink-100 p-8 shadow-md shadow-black/10 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col aspect-square rotate-2">
-              <div className="w-12 h-12 bg-pink-200/50 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-slate-800 group-hover:text-white transition-colors">
-                <LayoutTemplate size={24} />
-              </div>
-              <h4 className="text-xl font-medium text-slate-900 mb-3" style={{ letterSpacing: '-0.03em', lineHeight: 1.15 }}>UX Problem Framing</h4>
-              <p className="text-slate-700 leading-relaxed flex-grow">
-                Building a bespoke internal framework that standardised product discovery and cut friction between design and engineering.
-              </p>
-              <div className="mt-8 flex items-center text-sm font-medium text-slate-900 group-hover:text-slate-700 cursor-pointer" onClick={() => setActiveCaseStudy("placeholder-3")}>
-                View study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
           </div>
