@@ -65,7 +65,7 @@ export default function Home() {
         <ScrollSection className="py-24 md:py-32">
           <div className="flex flex-col items-center justify-center mb-12">
             <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[80px] uppercase leading-none text-center w-full`}>My Lean Process</h2>
-            <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">Using the Double Diamond framework</h3>
+            <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">Using the Double Diamond as a foundation, I run a lean UX process focused on continuous testing and rapid iteration to de-risk business decisions fast.</h3>
           </div>
           <div className="-mx-6 md:-mx-16 lg:-mx-32 relative overflow-visible">
             <Image
