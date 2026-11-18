@@ -301,7 +301,7 @@ export default function Home() {
 
 
         {/* Experience Section */}
-        <ScrollSection id="experience" className="max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <ScrollSection id="experience" className="scroll-mt-28 max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="flex flex-col items-center justify-center mb-16">
             <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[80px] uppercase leading-none text-center w-full`}>
               Experience

@@ -38,8 +38,9 @@ export default function FloatingNav() {
         case "case-studies":
         case "work":
         case "testimonials":
-        case "experience":
           return "case-studies";
+        case "experience":
+          return "experience";
         case "contact":
           return "contact";
         default:
@@ -96,18 +97,22 @@ export default function FloatingNav() {
   const isCaseStudiesRoute =
     pathname.startsWith("/work") || pathname.startsWith("/case-studies");
   const isAboutRoute = pathname.startsWith("/about");
+  const isExperienceRoute = pathname.startsWith("/experience");
   const isContactRoute = pathname.startsWith("/contact");
 
   const isCaseStudiesActive =
     isCaseStudiesRoute || (pathname === "/" && activeSection === "case-studies");
   const isAboutActive =
     isAboutRoute || (pathname === "/" && activeSection === "about");
+  const isExperienceActive =
+    isExperienceRoute || (pathname === "/" && activeSection === "experience");
   const isContactActive =
     isContactRoute || (pathname === "/" && activeSection === "contact");
   const isHomeActive =
     pathname === "/" &&
     !isCaseStudiesActive &&
     !isAboutActive &&
+    !isExperienceActive &&
     !isContactActive;
 
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -139,6 +144,12 @@ export default function FloatingNav() {
       href: "/#case-studies",
       isActive: isCaseStudiesActive,
       section: "case-studies",
+    },
+    {
+      label: "Experience",
+      href: "/#experience",
+      isActive: isExperienceActive,
+      section: "experience",
     },
     {
       label: "Contact",
@@ -179,7 +190,7 @@ export default function FloatingNav() {
                   setActiveSection(item.section);
                 }
               }}
-              className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
+              className="group relative inline-flex items-center whitespace-nowrap px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
             >
               <span className="relative inline-block">
                 {item.label}
@@ -226,7 +237,7 @@ export default function FloatingNav() {
                   setActiveSection(item.section);
                 }
               }}
-              className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
+              className="group relative inline-flex items-center whitespace-nowrap px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
             >
               <span className="relative inline-block">
                 {item.label}
