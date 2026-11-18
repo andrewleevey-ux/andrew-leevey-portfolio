@@ -33,9 +33,9 @@ export default function FloatingNav() {
 
   return (
     <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl px-6 py-3 flex justify-between items-center transition-all duration-300 ease-in-out ${
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl px-6 py-3 border-2 flex justify-between items-center transition-all duration-300 ease-in-out ${
         isScrolled
-          ? "bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_#000]"
+          ? "bg-white rounded-xl border-black shadow-[4px_4px_0px_#000]"
           : "bg-transparent border-transparent shadow-none"
       }`}
     >
