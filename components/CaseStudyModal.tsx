@@ -36,12 +36,14 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
         </button>
 
         {/* Hero Image */}
-        <div className="relative w-full aspect-video">
+        <div className="w-full shrink-0 overflow-hidden rounded-t-3xl bg-slate-100">
           <Image
             src={data.image || "/images/06-uxdoc-full.jpg"}
-            alt="Case Study Document"
-            fill
-            className="object-cover rounded-t-3xl"
+            alt={data.imageAlt || data.title}
+            width={2400}
+            height={1350}
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="w-full h-auto block object-contain"
           />
         </div>
 

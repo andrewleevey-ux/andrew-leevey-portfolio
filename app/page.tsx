@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Truck, LineChart, ArrowRight, Users, Link as LinkIcon, Download } from "lucide-react";
+import { ArrowRight, Users, Link as LinkIcon, Download } from "lucide-react";
 import Image from "next/image";
 import { Archivo_Black, Just_Me_Again_Down_Here } from "next/font/google";
 import CollaboratorCursor from "../components/CollaboratorCursor";
@@ -105,13 +105,15 @@ export default function Home() {
           <div className="flex flex-col gap-12">
             {/* Deep Dive Card 1 */}
             <div className="flex flex-col md:flex-row bg-white shadow-md border border-slate-200 rounded-3xl items-stretch overflow-hidden">
-              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0">
-                <div className="relative w-full h-full aspect-video min-h-[250px]">
+              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0 flex">
+                <div className="flex w-full h-full aspect-video min-h-[250px] overflow-hidden rounded-tr-3xl rounded-tl-none rounded-b-none">
                   <Image
                     src="/images/CRO_casestudy.jpg"
                     alt="CRO Case Study"
-                    fill
-                    className="object-cover rounded-tr-3xl rounded-tl-none rounded-b-none"
+                    width={2400}
+                    height={1350}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full min-h-[250px] object-cover"
                   />
                 </div>
               </div>
@@ -128,9 +130,16 @@ export default function Home() {
 
             {/* Deep Dive Card 2 */}
             <div className="flex flex-col md:flex-row bg-white shadow-md border border-slate-200 rounded-3xl items-stretch overflow-hidden">
-              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0">
-                <div className="bg-blue-500 rounded-tr-3xl rounded-tl-none rounded-b-none h-full min-h-[250px] w-full flex items-center justify-center text-white">
-                  <LineChart size={48} />
+              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0 flex">
+                <div className="flex w-full h-full aspect-video min-h-[250px] overflow-hidden rounded-tr-3xl rounded-tl-none rounded-b-none">
+                  <Image
+                    src="/images/LPD_Basket.jpg"
+                    alt="Data-Driven Design basket page redesign showcase"
+                    width={2400}
+                    height={1350}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full min-h-[250px] object-cover"
+                  />
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
@@ -146,9 +155,16 @@ export default function Home() {
 
             {/* Deep Dive Card 3 */}
             <div className="flex flex-col md:flex-row bg-white shadow-md border border-slate-200 rounded-3xl items-stretch overflow-hidden">
-              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0">
-                <div className="bg-pink-500 rounded-tr-3xl rounded-tl-none rounded-b-none h-full min-h-[250px] w-full flex items-center justify-center text-white">
-                  <Truck size={48} />
+              <div className="w-full md:w-1/2 pt-8 pl-0 pb-0 flex">
+                <div className="flex w-full h-full aspect-video min-h-[250px] overflow-hidden rounded-tr-3xl rounded-tl-none rounded-b-none">
+                  <Image
+                    src="/images/WTF_flow.jpg"
+                    alt="Service Ecosystems end-to-end user flow diagram"
+                    width={2400}
+                    height={1350}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full min-h-[250px] object-cover"
+                  />
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
