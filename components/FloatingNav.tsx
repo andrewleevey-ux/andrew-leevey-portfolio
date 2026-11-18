@@ -53,27 +53,43 @@ export default function FloatingNav() {
           <Link
             href="/"
             onClick={handleHomeClick}
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             Home
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
           <Link
             href="/#work"
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             Work
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
           <Link
             href="/#cv"
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             CV
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
           <Link
             href="#about"
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             About
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
         </div>
 
@@ -95,30 +111,46 @@ export default function FloatingNav() {
           <Link
             href="/"
             onClick={handleHomeClick}
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             Home
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
           <Link
             href="/#work"
             onClick={() => setIsOpen(false)}
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             Work
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
           <Link
             href="/#cv"
             onClick={() => setIsOpen(false)}
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             CV
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
           <Link
             href="#about"
             onClick={() => setIsOpen(false)}
-            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
+            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
           >
             About
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
           </Link>
         </div>
       )}
