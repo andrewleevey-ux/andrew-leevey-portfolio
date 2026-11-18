@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export default function FloatingNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeHash, setActiveHash] = useState<string>("");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -16,20 +17,88 @@ export default function FloatingNav() {
       } else {
         setIsScrolled(false);
       }
+      if (pathname === "/" && window.scrollY < 100 && !window.location.hash) {
+        setActiveHash("");
+      }
     };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
+
+  useEffect(() => {
+    const updateHash = () => {
+      setActiveHash(window.location.hash.replace(/^#/, ""));
+    };
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+
+    if (pathname !== "/") {
+      return () => window.removeEventListener("hashchange", updateHash);
+    }
+
+    const sectionIds = ["work", "cv", "experience", "about"];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            if (id === "experience") {
+              setActiveHash("cv");
+            } else {
+              setActiveHash(id);
+            }
+          } else {
+            setActiveHash((prev) => {
+              const id = entry.target.id === "experience" ? "cv" : entry.target.id;
+              return prev === id && window.scrollY < 200 ? "" : prev;
+            });
+          }
+        });
+      },
+      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+      observer.disconnect();
+    };
+  }, [pathname]);
+
+  const isWorkActive =
+    pathname.startsWith("/work") ||
+    pathname.startsWith("/case-studies") ||
+    (pathname === "/" && activeHash === "work");
+  const isCvActive =
+    pathname.startsWith("/cv") || (pathname === "/" && activeHash === "cv");
+  const isAboutActive =
+    pathname.startsWith("/about") || (pathname === "/" && activeHash === "about");
+  const isHomeActive =
+    pathname === "/" && !isWorkActive && !isCvActive && !isAboutActive;
 
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     setIsOpen(false);
+    setActiveHash("");
     if (pathname === "/") {
       e.preventDefault();
+      window.history.pushState(null, "", "/");
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
+
+  const navLinks = [
+    { label: "Home", href: "/", isActive: isHomeActive, onClick: handleHomeClick, hash: "" },
+    { label: "Work", href: "/#work", isActive: isWorkActive, hash: "work" },
+    { label: "CV", href: "/#cv", isActive: isCvActive, hash: "cv" },
+    { label: "About", href: "#about", isActive: isAboutActive, hash: "about" },
+  ];
 
   return (
     <nav
@@ -50,47 +119,35 @@ export default function FloatingNav() {
         </Link>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/"
-            onClick={handleHomeClick}
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            Home
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
-          <Link
-            href="/#work"
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            Work
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
-          <Link
-            href="/#cv"
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            CV
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
-          <Link
-            href="#about"
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            About
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
+          {navLinks.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              aria-current={item.isActive ? "page" : undefined}
+              onClick={(e) => {
+                if (item.onClick) {
+                  item.onClick(e);
+                } else {
+                  setActiveHash(item.hash);
+                }
+              }}
+              className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
+            >
+              <span className="relative inline-block">
+                {item.label}
+                <span
+                  aria-hidden="true"
+                  className={`pointer-events-none absolute left-0 -bottom-1 w-full h-[4px] bg-[#36C5F0] origin-left transition-transform duration-200 ease-out ${
+                    item.isActive ? "scale-x-100" : "scale-x-0"
+                  }`}
+                />
+              </span>
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
+            </Link>
+          ))}
         </div>
 
         <button
@@ -108,50 +165,36 @@ export default function FloatingNav() {
 
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 mt-3 pt-3 flex flex-col gap-2">
-          <Link
-            href="/"
-            onClick={handleHomeClick}
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            Home
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
-          <Link
-            href="/#work"
-            onClick={() => setIsOpen(false)}
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            Work
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
-          <Link
-            href="/#cv"
-            onClick={() => setIsOpen(false)}
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            CV
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
-          <Link
-            href="#about"
-            onClick={() => setIsOpen(false)}
-            className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
-          >
-            About
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
-            <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
-          </Link>
+          {navLinks.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              aria-current={item.isActive ? "page" : undefined}
+              onClick={(e) => {
+                if (item.onClick) {
+                  item.onClick(e);
+                } else {
+                  setIsOpen(false);
+                  setActiveHash(item.hash);
+                }
+              }}
+              className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
+            >
+              <span className="relative inline-block">
+                {item.label}
+                <span
+                  aria-hidden="true"
+                  className={`pointer-events-none absolute left-0 -bottom-1 w-full h-[4px] bg-[#36C5F0] origin-left transition-transform duration-200 ease-out ${
+                    item.isActive ? "scale-x-100" : "scale-x-0"
+                  }`}
+                />
+              </span>
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -left-1" />
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -top-1 -right-1" />
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -left-1" />
+              <span aria-hidden="true" className="pointer-events-none absolute w-1.5 h-1.5 bg-white border-[1.5px] border-[#36C5F0] opacity-0 group-hover:opacity-100 transition-opacity duration-150 -bottom-1 -right-1" />
+            </Link>
+          ))}
         </div>
       )}
     </nav>
