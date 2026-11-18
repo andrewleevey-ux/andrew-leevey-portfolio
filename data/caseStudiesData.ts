@@ -6,6 +6,7 @@ export const caseStudiesData = [
     title: "Checkout Delivery",
     summary: "As the Lead Product Designer, I collaborated closely with my PM and key stakeholders to deliver tangible commercial value. By identifying targeted CRO testing opportunities within the checkout, we boosted the adoption of high-margin delivery options and drove a significant uplift in key metrics.",
     image: "/images/CRO_casestudy.jpg",
+    imageAlt: "CRO Case Study",
     highlights: [
       "Led end-to-end discovery and stakeholder alignment",
       "Applied a Lean UX test and learn methodology",
@@ -20,7 +21,8 @@ export const caseStudiesData = [
     subtitle: "",
     title: "Data-Driven Design",
     summary: "Coming Soon",
-    image: "/images/06-uxdoc-full.jpg",
+    image: "/images/LPD_Basket.jpg",
+    imageAlt: "Data-Driven Design basket page redesign showcase",
     highlights: ["Coming Soon"],
     pageContent: "Coming Soon"
   },
@@ -30,7 +32,8 @@ export const caseStudiesData = [
     subtitle: "",
     title: "Service Ecosystems",
     summary: "Coming Soon",
-    image: "/images/06-uxdoc-full.jpg",
+    image: "/images/WTF_flow.jpg",
+    imageAlt: "Service Ecosystems end-to-end user flow diagram",
     highlights: ["Coming Soon"],
     pageContent: "Coming Soon"
   }
