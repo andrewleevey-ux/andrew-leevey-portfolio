@@ -93,7 +93,7 @@ export default function AboutMeSection() {
   });
 
   return (
-    <ScrollSection className="flex flex-col justify-between min-h-screen py-12 px-8">
+    <ScrollSection id="about" className="scroll-mt-28 flex flex-col justify-between min-h-screen py-12 px-8">
       <div className="flex-1 flex flex-col items-center justify-center max-w-4xl w-full mx-auto">
         <div className="w-full flex justify-start mb-4 md:mb-8">
           <Image
