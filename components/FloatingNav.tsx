@@ -1,12 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function FloatingNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     setIsOpen(false);
@@ -17,7 +32,13 @@ export default function FloatingNav() {
   };
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-3xl bg-white rounded-full border border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.08)] px-8 py-3 flex justify-between items-center">
+    <nav
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl px-6 py-3 flex justify-between items-center transition-all duration-300 ease-in-out ${
+        isScrolled
+          ? "bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_#000]"
+          : "bg-transparent border-transparent shadow-none"
+      }`}
+    >
       <div className="flex justify-between items-center w-full">
         <Link
           href="/"
@@ -32,25 +53,25 @@ export default function FloatingNav() {
           <Link
             href="/"
             onClick={handleHomeClick}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             Home
           </Link>
           <Link
             href="/#work"
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             Work
           </Link>
           <Link
             href="/#cv"
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             CV
           </Link>
           <Link
             href="#about"
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             About
           </Link>
@@ -74,28 +95,28 @@ export default function FloatingNav() {
           <Link
             href="/"
             onClick={handleHomeClick}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             Home
           </Link>
           <Link
             href="/#work"
             onClick={() => setIsOpen(false)}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             Work
           </Link>
           <Link
             href="/#cv"
             onClick={() => setIsOpen(false)}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             CV
           </Link>
           <Link
             href="#about"
             onClick={() => setIsOpen(false)}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-[#36C5F0] hover:text-slate-900 transition-colors"
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-slate-600 transition-colors hover:bg-[#36C5F0] hover:text-white"
           >
             About
           </Link>
