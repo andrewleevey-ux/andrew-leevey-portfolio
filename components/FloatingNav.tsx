@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export default function FloatingNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeHash, setActiveHash] = useState<string>("");
+  const [activeSection, setActiveSection] = useState<string>("home");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -17,8 +17,8 @@ export default function FloatingNav() {
       } else {
         setIsScrolled(false);
       }
-      if (pathname === "/" && window.scrollY < 100 && !window.location.hash) {
-        setActiveHash("");
+      if (pathname === "/" && window.scrollY < 100) {
+        setActiveSection("home");
       }
     };
 
@@ -28,8 +28,30 @@ export default function FloatingNav() {
   }, [pathname]);
 
   useEffect(() => {
+    const mapSectionToNav = (id: string) => {
+      switch (id) {
+        case "home":
+          return "home";
+        case "about":
+        case "lean-process":
+          return "about";
+        case "case-studies":
+        case "work":
+        case "testimonials":
+        case "experience":
+          return "case-studies";
+        case "contact":
+          return "contact";
+        default:
+          return "home";
+      }
+    };
+
     const updateHash = () => {
-      setActiveHash(window.location.hash.replace(/^#/, ""));
+      const hash = window.location.hash.replace(/^#/, "");
+      if (hash) {
+        setActiveSection(mapSectionToNav(hash));
+      }
     };
 
     updateHash();
@@ -39,26 +61,25 @@ export default function FloatingNav() {
       return () => window.removeEventListener("hashchange", updateHash);
     }
 
-    const sectionIds = ["work", "cv", "experience", "about"];
+    const sectionIds = [
+      "home",
+      "about",
+      "lean-process",
+      "case-studies",
+      "testimonials",
+      "experience",
+      "contact",
+    ];
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = entry.target.id;
-            if (id === "experience") {
-              setActiveHash("cv");
-            } else {
-              setActiveHash(id);
-            }
-          } else {
-            setActiveHash((prev) => {
-              const id = entry.target.id === "experience" ? "cv" : entry.target.id;
-              return prev === id && window.scrollY < 200 ? "" : prev;
-            });
+            setActiveSection(mapSectionToNav(entry.target.id));
           }
         });
       },
-      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
     );
 
     sectionIds.forEach((id) => {
@@ -72,20 +93,26 @@ export default function FloatingNav() {
     };
   }, [pathname]);
 
-  const isWorkActive =
-    pathname.startsWith("/work") ||
-    pathname.startsWith("/case-studies") ||
-    (pathname === "/" && activeHash === "work");
-  const isCvActive =
-    pathname.startsWith("/cv") || (pathname === "/" && activeHash === "cv");
+  const isCaseStudiesRoute =
+    pathname.startsWith("/work") || pathname.startsWith("/case-studies");
+  const isAboutRoute = pathname.startsWith("/about");
+  const isContactRoute = pathname.startsWith("/contact");
+
+  const isCaseStudiesActive =
+    isCaseStudiesRoute || (pathname === "/" && activeSection === "case-studies");
   const isAboutActive =
-    pathname.startsWith("/about") || (pathname === "/" && activeHash === "about");
+    isAboutRoute || (pathname === "/" && activeSection === "about");
+  const isContactActive =
+    isContactRoute || (pathname === "/" && activeSection === "contact");
   const isHomeActive =
-    pathname === "/" && !isWorkActive && !isCvActive && !isAboutActive;
+    pathname === "/" &&
+    !isCaseStudiesActive &&
+    !isAboutActive &&
+    !isContactActive;
 
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     setIsOpen(false);
-    setActiveHash("");
+    setActiveSection("home");
     if (pathname === "/") {
       e.preventDefault();
       window.history.pushState(null, "", "/");
@@ -94,10 +121,31 @@ export default function FloatingNav() {
   };
 
   const navLinks = [
-    { label: "Home", href: "/", isActive: isHomeActive, onClick: handleHomeClick, hash: "" },
-    { label: "Work", href: "/#work", isActive: isWorkActive, hash: "work" },
-    { label: "CV", href: "/#cv", isActive: isCvActive, hash: "cv" },
-    { label: "About", href: "#about", isActive: isAboutActive, hash: "about" },
+    {
+      label: "Home",
+      href: "/#home",
+      isActive: isHomeActive,
+      onClick: handleHomeClick,
+      section: "home",
+    },
+    {
+      label: "About",
+      href: "/#about",
+      isActive: isAboutActive,
+      section: "about",
+    },
+    {
+      label: "Case studies",
+      href: "/#case-studies",
+      isActive: isCaseStudiesActive,
+      section: "case-studies",
+    },
+    {
+      label: "Contact",
+      href: "/#contact",
+      isActive: isContactActive,
+      section: "contact",
+    },
   ];
 
   return (
@@ -128,7 +176,7 @@ export default function FloatingNav() {
                 if (item.onClick) {
                   item.onClick(e);
                 } else {
-                  setActiveHash(item.hash);
+                  setActiveSection(item.section);
                 }
               }}
               className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"
@@ -175,7 +223,7 @@ export default function FloatingNav() {
                   item.onClick(e);
                 } else {
                   setIsOpen(false);
-                  setActiveHash(item.hash);
+                  setActiveSection(item.section);
                 }
               }}
               className="group relative inline-flex items-center px-3 py-1.5 border-[1.5px] border-transparent hover:border-[#36C5F0] hover:bg-[#36C5F0]/5 text-black transition-colors duration-150 text-sm font-medium"

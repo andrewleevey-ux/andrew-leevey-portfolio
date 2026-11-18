@@ -28,7 +28,7 @@ export default function Home() {
       <GuestCursor />
       <main className="max-w-5xl mx-auto px-6 pb-24">
         {/* Hero Section */}
-        <ScrollSection className="relative w-full min-h-[100svh] flex flex-col justify-center items-center text-center py-24">
+        <ScrollSection id="home" className="scroll-mt-28 relative w-full min-h-[100svh] flex flex-col justify-center items-center text-center py-24">
           {!activeCaseStudy && <CollaboratorCursor
             name="Andrew"
             role="Lead"
@@ -62,7 +62,7 @@ export default function Home() {
         <AboutMeSection />
 
         {/* Lean Product Process Section */}
-        <ScrollSection className="py-24 md:py-32">
+        <ScrollSection id="lean-process" className="py-24 md:py-32">
           <div className="flex flex-col items-center justify-center mb-12">
             <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[80px] uppercase leading-none text-center w-full`}>My Lean Process</h2>
             <h3 className="text-slate-600 text-center mt-2 text-xl font-medium">Using the Double Diamond as a foundation, I run a lean UX process focused on continuous testing and rapid iteration to de-risk business decisions fast.</h3>
@@ -87,7 +87,7 @@ export default function Home() {
         </ScrollSection>
 
         {/* Deep Dive Section */}
-        <ScrollSection className="max-w-6xl mx-auto py-24 md:py-32 relative">
+        <ScrollSection id="case-studies" className="scroll-mt-28 max-w-6xl mx-auto py-24 md:py-32 relative">
           {!activeCaseStudy && <CollaboratorCursor
             name="Mike"
             role="Developer"
@@ -165,7 +165,7 @@ export default function Home() {
         </ScrollSection>
 
         {/* Testimonials Section */}
-        <ScrollSection className="relative py-24 md:py-32 z-40">
+        <ScrollSection id="testimonials" className="relative py-24 md:py-32 z-40">
           {!activeCaseStudy && <CollaboratorCursor
             name="Lis"
             role="UX manager"
@@ -394,9 +394,9 @@ export default function Home() {
         </ScrollSection>
 
         {/* About Me Section */}
-        <ScrollSection id="about" className="max-w-6xl mx-auto py-24 md:py-32 relative">
+        <ScrollSection id="contact" className="scroll-mt-28 max-w-6xl mx-auto py-24 md:py-32 relative">
           <div className="flex flex-col items-center justify-center mb-16">
-            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[80px] uppercase leading-none text-center w-full`}>About me</h2>
+            <h2 className={`${archivoBlack.className} text-black text-5xl md:text-[80px] uppercase leading-none text-center w-full`}>GET IN TOUCH</h2>
             <h3 className="text-lg text-slate-600 text-center mt-2">Who am I?</h3>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 mt-8">
