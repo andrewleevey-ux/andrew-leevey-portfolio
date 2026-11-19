@@ -416,8 +416,15 @@ export default function Home() {
             <h3 className="text-lg text-slate-600 text-center mt-2">Who am I?</h3>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 mt-8">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-slate-200 flex items-center justify-center shrink-0 border-4 border-white drop-shadow-md">
-              <span className="text-slate-500 font-medium">Profile Picture</span>
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-slate-200 flex items-center justify-center shrink-0 border-4 border-white drop-shadow-md">
+              <Image
+                src="/images/profile.jpg"
+                alt="Andy Leevey, Lead Product Designer"
+                width={2316}
+                height={3088}
+                sizes="(max-width: 768px) 192px, 256px"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
             <div className="w-full flex flex-col gap-6">
               <p className="text-slate-700 leading-relaxed">
