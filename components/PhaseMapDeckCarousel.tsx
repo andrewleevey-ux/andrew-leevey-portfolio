@@ -2,14 +2,15 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Presentation } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export interface PhaseMapDeckSlide {
-  index: number;
   filename: string;
-  exists: boolean;
   title: string;
   caption: string;
+  alt: string;
+  width: number;
+  height: number;
 }
 
 interface PhaseMapDeckCarouselProps {
@@ -324,59 +325,33 @@ export default function PhaseMapDeckCarousel({
             aria-label={`${index + 1} of ${slides.length}`}
             className="phase-map-carousel-slide"
           >
-            {slide.exists ? (
-              <div className="border-2 border-black bg-white rounded-xl overflow-hidden">
+            <div className="border-2 border-black bg-white rounded-xl overflow-hidden flex flex-col">
+              <div className="bg-slate-50 flex items-center justify-center">
                 <Image
-                  src={`/images/${slide.filename}`}
-                  alt={`${slide.title} — ${slide.caption}`}
-                  width={1600}
-                  height={900}
+                  src={`/images/phase-map/${slide.filename}`}
+                  alt={slide.alt}
+                  width={slide.width}
+                  height={slide.height}
                   sizes="(max-width: 896px) 100vw, 800px"
-                  className="w-full h-auto block"
+                  fetchPriority={index > 0 ? "low" : undefined}
+                  loading={index > 0 ? "lazy" : undefined}
+                  className="w-full h-auto block object-contain bg-white"
                 />
-                <div className="border-t-2 border-black bg-slate-50 px-4 py-3 flex flex-col gap-1">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="text-sm font-bold text-slate-900">
-                      {slide.title}
-                    </span>
-                    <span className="text-xs font-mono text-slate-600">
-                      /images/{slide.filename}
-                    </span>
-                  </div>
-                  <p className="text-sm text-slate-700 leading-snug">
-                    {slide.caption}
-                  </p>
-                </div>
               </div>
-            ) : (
-              <div className="border-2 border-dashed border-black bg-slate-50 rounded-xl p-6 md:p-8 min-h-[260px] flex flex-col justify-between gap-6">
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-black bg-[#36C5F0] text-black">
-                    <Presentation size={14} aria-hidden="true" />
-                    Slide {slide.index} of {slides.length}
-                  </span>
-                  <code className="text-xs font-mono font-semibold text-slate-900 bg-white border border-black/40 rounded-md px-2.5 py-1">
-                    /images/{slide.filename}
-                  </code>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 leading-tight">
+              <div className="border-t-2 border-black bg-slate-50 px-4 py-3 flex flex-col gap-1">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-bold text-slate-900">
                     {slide.title}
-                  </h4>
-                  <p className="text-sm md:text-base text-slate-700 leading-relaxed max-w-2xl">
-                    {slide.caption}
-                  </p>
-                </div>
-
-                <div className="pt-3 border-t border-dashed border-slate-300 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
-                  <span>Senior Management &amp; Director Buy-In Deck</span>
-                  <span className="font-mono text-slate-600">
-                    public/images/{slide.filename}
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full border border-black bg-[#36C5F0]/20 text-slate-900">
+                    Slide {index + 1} / {slides.length}
                   </span>
                 </div>
+                <p className="text-sm text-slate-700 leading-snug">
+                  {slide.caption}
+                </p>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

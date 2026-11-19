@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, CheckCircle2, Sparkles } from "lucide-react";
 import GuestCursor from "./GuestCursor";
-import PhaseMapMedia, { imageExistsInPublic } from "./PhaseMapMedia";
+import PhaseMapMedia from "./PhaseMapMedia";
 import PhaseMapDeckCarousel, {
   type PhaseMapDeckSlide,
 } from "./PhaseMapDeckCarousel";
@@ -77,88 +77,118 @@ const KPI_CARD_ELEMENTS = [
   },
 ];
 
-const DECK_SLIDE_DEFINITIONS = [
+const DECK_SLIDES: PhaseMapDeckSlide[] = [
   {
-    title: "Title & CRO Scrum Mandate",
+    filename: "Slide1pm.jpeg",
+    title: "Phase Map & KPI Cards",
     caption:
-      "Introducing the Phase Map initiative to Iceland directors and senior management.",
+      "Opening slide introducing the Phase Map and KPI Cards framework for Iceland UX Ecommerce.",
+    alt: "Presentation slide 1 titled Phase Map and KPI Cards for Iceland UX Ecommerce over a wireframe sketch and laptop background",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Why Mapping End-to-End Matters",
+    filename: "Slide3pm.jpeg",
+    title: "Core User Journey Recap",
     caption:
-      "Moving away from isolated page tweaks towards a unified view of customer progression.",
+      "Mapping what users must do from point A to B to successfully complete a shop, including Acquisition & Retention.",
+    alt: "Presentation slide showing the Core User Journey diagram from point A where users start to point B with green, red, and blue feedback markers",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Expanding Scope Beyond Checkout",
+    filename: "Slide4pm.jpeg",
+    title: "8 Numbered, Colour-Coded Phases",
     caption:
-      "Connecting Acquisition through Retention so every squad sees how upstream journeys affect conversion.",
+      "Breaking the core journey into Phases 0–7: Acquisition, Onboarding, Registration, Buying Cycle, Purchase, Amendment, Fulfilment, and Retention.",
+    alt: "Presentation slide listing the eight numbered colour-coded phases from 0 Acquisition through 7 Retention",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Anatomy of the Phase Map",
+    filename: "Slide5pm.jpeg",
+    title: "Applying User Feedback",
     caption:
-      "Structuring numbered, colour-coded phases paired with three dedicated feedback swimlanes.",
+      "Collecting user feedback across touchpoints and mapping it directly onto the Phase Map.",
+    alt: "Presentation slide introducing how user feedback is collected and applied to the Phase Map",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Cross-Project Visual Taxonomy",
+    filename: "Slide6pm.jpeg",
+    title: "Feedback Sources",
     caption:
-      "Standardising phase numbers and colours across Sketch deliverables, tickets, and sprint boards.",
+      "Combining UX Testing (Think Out Loud, Feedback Tab), Analytics (GA, ContentSquare), and Direct channels (Feefo, Contact Centre, The Team).",
+    alt: "Presentation slide categorising user feedback sources into UX Testing, Analytics, and Direct channels",
+    width: 960,
+    height: 540,
   },
   {
-    title: "From Digital Canvas to Office Wall",
+    filename: "Slide7pm.jpeg",
+    title: "Think Out Loud Test Tasks",
     caption:
-      "Tiling six landscape A3 Illustrator panels onto the largest office wall to keep customers visible daily.",
+      "Unmoderated mobile UserZoom prompts for new shoppers covering Onboarding through Purchase.",
+    alt: "Presentation slide showing the two Think Out Loud mobile test tasks from Onboarding to Purchase: adding £25 of shopping and checking out",
+    width: 960,
+    height: 540,
   },
   {
-    title: "15 Unmoderated UserZoom Tests",
+    filename: "Slide8pm.jpeg",
+    title: "Registration Micro Journey",
     caption:
-      "Observing non-online shoppers completing the open task: \"spend £25 with Iceland\".",
+      "Phase journey breakdown showing Registration touchpoints, welcome email content, and +£1.1m incremental opportunity.",
+    alt: "Presentation slide illustrating the Registration micro journey from Homepage to Buying Cycle with a +£1.1m incremental opportunity callout",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Capture System: Green, Red & Blue Notes",
+    filename: "Slide9pm.jpeg",
+    title: "Where KPI Cards Come From",
     caption:
-      "Recording good feedback, pain points, and neutral observations without bias.",
+      "Combining Phase Map insights with cross-team collaboration to produce actionable KPI Cards.",
+    alt: "Presentation slide showing the formula Info from Phase Map plus Team Collaboration equals KPI Cards",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Introducing Testing Tuesdays",
+    filename: "Slide10pm.jpeg",
+    title: "The Cards Explained",
     caption:
-      "Opening research playback to merchandising, trading, QA, and engineering teams each week.",
+      "Breakdown of the Phase 3 Buying Cycle card showing Pages, Phase KPI (Sessions to Add to Bag), User Goal, and Business Goal.",
+    alt: "Presentation slide explaining the four KPI Card elements alongside an orange Phase 3 Buying Cycle card mockup",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Grouping & 3-Sticker Dot Voting",
+    filename: "Slide11pm.jpeg",
+    title: "Card Uses & Team Value",
     caption:
-      "Clustering duplicates by page and democratising prioritisation across departments.",
+      "How physical KPI Cards make UX measurable, support data-driven decisions, and align teams around customers.",
+    alt: "Presentation slide listing seven ways teams use KPI Cards to keep the customer at the heart of data-driven decisions",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Pocket-Sized Phase KPI Cards",
+    filename: "Slide12pm.jpeg",
+    title: "Summary: Customer at the Heart",
     caption:
-      "Putting touchpoints, KPIs, user goals, and business goals into every team member's hands.",
+      "Recap displaying the full colour-coded Phase 0–7 KPI Card deck keeping the customer central to every website change.",
+    alt: "Presentation slide summary displaying all eight colour-coded Phase KPI Cards fanned side by side",
+    width: 960,
+    height: 540,
   },
   {
-    title: "Early Commercial Wins",
+    filename: "Slide13pm.jpeg",
+    title: "Going Forward: What's Next?",
     caption:
-      "Translating validated pain points into high-impact A/B tests across registration and mobile header.",
-  },
-  {
-    title: "Next Steps & Cross-Team Roadmap",
-    caption:
-      "Embedding the Phase Map cadence into ongoing quarterly CRO experimentation and leadership reviews.",
+      "Next steps covering SMT buy-in, confirming KPIs & goals, adding core personas to card backs, an Analytics KPI Card Dashboard, and team distribution.",
+    alt: "Presentation slide outlining five next steps including SMT buy-in, confirming KPIs, core persona card backs, analytics dashboard, and team rollout",
+    width: 960,
+    height: 540,
   },
 ];
 
 export default function PhaseMapCaseStudy() {
-  const deckSlides: PhaseMapDeckSlide[] = DECK_SLIDE_DEFINITIONS.map(
-    (slide, idx) => {
-      const index = idx + 1;
-      const filename = `Slide${index}pm.jpeg`;
-      return {
-        index,
-        filename,
-        exists: imageExistsInPublic(filename),
-        title: slide.title,
-        caption: slide.caption,
-      };
-    }
-  );
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
@@ -318,33 +348,47 @@ export default function PhaseMapCaseStudy() {
             <div className="flex flex-col gap-6">
               <PhaseMapMedia
                 filename="phasemap_populated.jpg"
-                alt="Populated wall-mounted Phase Map in situ"
+                alt="Full wall-mounted Iceland Phase Map populated with colour-coded customer feedback post-it notes across journey stages"
                 caption="Populated wall-mounted Phase Map in situ"
+                width={4032}
+                height={2080}
                 tag="Wall Installation"
               />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <PhaseMapMedia
                   filename="swimlane-overview-empty.png"
-                  alt="Empty journey structure and 3 feedback swimlanes"
+                  alt="Diagram of the empty Phase Map structure showing journey stages above three horizontal feedback swimlanes"
                   caption="Empty journey structure & 3 feedback swimlanes"
+                  width={1400}
+                  height={738}
+                  sizes="(max-width: 768px) 100vw, 420px"
                   tag="Framework"
                 />
                 <PhaseMapMedia
                   filename="goingdigital.jpg"
-                  alt="Translating paper journey mapping into Sketch"
+                  alt="Digital translation of the paper customer journey map inside Sketch with colour-coded phase columns"
                   caption="Translating paper journey mapping into Sketch"
+                  width={900}
+                  height={500}
+                  sizes="(max-width: 768px) 100vw, 420px"
                   tag="Digital System"
                 />
                 <PhaseMapMedia
                   filename="colourusemap.png"
-                  alt="Numbered, colour-coded phase taxonomy system"
+                  alt="Visual taxonomy chart showing numbered and colour-coded phases applied consistently across standalone UX journeys"
                   caption="Numbered, colour-coded phase taxonomy system"
+                  width={2586}
+                  height={990}
+                  sizes="(max-width: 768px) 100vw, 420px"
                   tag="Taxonomy"
                 />
                 <PhaseMapMedia
                   filename="phasemap_empty.jpg"
-                  alt="Six tiled landscape A3 panels mounted on the office wall"
+                  alt="Six tiled landscape A3 printed panels of the blank Phase Map pinned across the office wall"
                   caption="Six tiled landscape A3 panels mounted on the office wall"
+                  width={4032}
+                  height={2088}
+                  sizes="(max-width: 768px) 100vw, 420px"
                   tag="Print & Tile"
                 />
               </div>
@@ -438,14 +482,20 @@ export default function PhaseMapCaseStudy() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <PhaseMapMedia
                 filename="swimlane-overview.png"
-                alt="Populated feedback swimlanes mapped across journey phases"
+                alt="Diagram of the Phase Map swimlanes populated with green good feedback, red pain points, and blue observation notes"
                 caption="Populated feedback swimlanes mapped across journey phases"
+                width={1400}
+                height={738}
+                sizes="(max-width: 768px) 100vw, 420px"
                 tag="Synthesis"
               />
               <PhaseMapMedia
                 filename="phasemap_closeup.jpg"
-                alt="Close-up of grouped post-its and 3-sticker dot voting on the wall map"
+                alt="Close-up photograph of the Buying Cycle section on the wall-mounted Phase Map covered in grouped post-it notes and priority dot-voting stickers"
                 caption="Close-up of grouped post-its and 3-sticker dot voting on the wall map"
+                width={5892}
+                height={3564}
+                sizes="(max-width: 768px) 100vw, 420px"
                 tag="Dot Voting"
               />
             </div>
@@ -504,12 +554,14 @@ export default function PhaseMapCaseStudy() {
 
             <PhaseMapMedia
               filename="KPI_Cards_header.jpg"
-              alt="Pocket-sized Phase KPI Cards linking user goals to business KPIs"
+              alt="Colour-coded printed pocket-sized Phase KPI Cards showing touchpoints, phase KPIs, user goals, and business goals"
               caption="Pocket-sized Phase KPI Cards linking user goals directly to commercial metrics"
+              width={858}
+              height={313}
               tag="Phase KPI Cards"
             />
 
-            <PhaseMapDeckCarousel slides={deckSlides} />
+            <PhaseMapDeckCarousel slides={DECK_SLIDES} />
           </section>
 
           {/* Chapter 04 */}
@@ -622,8 +674,10 @@ export default function PhaseMapCaseStudy() {
 
                 <PhaseMapMedia
                   filename="mobileheader-examplegrey.jpg"
-                  alt="Mobile header UI surfacing persistent running basket total"
+                  alt="Iceland mobile header UI mockup surfacing the persistent running basket total alongside navigation and search controls"
                   caption="Mobile header iteration surfacing the persistent running basket total"
+                  width={1366}
+                  height={500}
                   tag="Mobile Experiment UI"
                 />
               </article>
