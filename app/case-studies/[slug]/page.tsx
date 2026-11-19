@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
 import CaseStudyBottomNav from "../../../components/CaseStudyBottomNav";
+import PhaseMapCaseStudy from "../../../components/PhaseMapCaseStudy";
 import { caseStudiesData } from "../../../data/caseStudiesData";
 import { notFound } from "next/navigation";
 
@@ -18,6 +19,10 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
   if (!data) {
     notFound();
+  }
+
+  if (resolvedParams.slug === "phase-map") {
+    return <PhaseMapCaseStudy />;
   }
 
   // If this is a placeholder case study, render the simple view

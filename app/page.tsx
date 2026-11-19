@@ -159,7 +159,7 @@ export default function Home() {
                 <div className="flex w-full h-full aspect-video min-h-[250px] overflow-hidden rounded-tr-3xl rounded-tl-none rounded-b-none">
                   <Image
                     src="/images/WTF_flow.jpg"
-                    alt="Service Ecosystems end-to-end user flow diagram"
+                    alt="The Phase Map end-to-end customer journey mapping diagram"
                     width={2400}
                     height={1350}
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -168,11 +168,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
-                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Service Ecosystems</h3>
+                <span className="text-sm font-medium text-slate-500 mb-1">End-to-End Journey Mapping</span>
+                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>The Phase Map</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
-                  Mapping out end-to-end service blueprints to identify friction points across both digital touchpoints and operational processes, delivering a unified customer journey.
+                  Stepping in as the UX lead for a newly formed CRO scrum team at Iceland, I designed a wall-sized customer journey map to uncover core friction points and build cross-departmental alignment. Pairing democratized user research with executive KPI cards, the framework directly informed high-impact A/B tests across desktop and mobile.
                 </p>
-                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setActiveCaseStudy("placeholder-3")}>
+                <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setActiveCaseStudy("phase-map")}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>

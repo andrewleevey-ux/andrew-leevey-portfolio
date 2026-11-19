@@ -33,13 +33,18 @@ export const caseStudiesData = [
   },
   {
     id: 3,
-    slug: "placeholder-3",
-    subtitle: "",
-    title: "Service Ecosystems",
-    summary: "Coming Soon",
+    slug: "phase-map",
+    subtitle: "End-to-End Journey Mapping",
+    title: "The Phase Map",
+    summary: "Stepping in as the UX lead for a newly formed CRO scrum team at Iceland, I designed a wall-sized customer journey map to uncover core friction points and build cross-departmental alignment. Pairing democratized user research with executive KPI cards, the framework directly informed high-impact A/B tests across desktop and mobile.",
     image: "/images/WTF_flow.jpg",
-    imageAlt: "Service Ecosystems end-to-end user flow diagram",
-    highlights: ["Coming Soon"],
-    pageContent: "Coming Soon"
+    imageAlt: "The Phase Map end-to-end customer journey mapping diagram",
+    highlights: [
+      "Mapped the full journey from acquisition to retention using numbered, colour-coded phases and feedback swimlanes",
+      "Launched \"Testing Tuesdays\" to turn 15 unmoderated UserZoom tests into cross-team prioritisation workshops",
+      "Created pocket-sized Phase KPI Cards linking user goals directly to business KPIs for senior leadership buy-in",
+      "Delivered +4.81% conversion uplift on registration and +1.7% mobile conversion uplift (+1.4% revenue per user)"
+    ],
+    pageContent: "Full case study content here."
   }
 ];
