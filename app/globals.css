@@ -38,8 +38,8 @@ body {
 }
 
 .dot-grid {
-  background-image: radial-gradient(circle, #cbd5e1 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.16) 1.25px, transparent 1.25px);
+  background-size: 24px 24px;
 }
 
 @keyframes marquee {
