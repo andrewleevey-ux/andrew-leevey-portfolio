@@ -168,9 +168,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-8 md:p-12">
-                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>Service Ecosystems</h3>
+                <h3 className="text-slate-900 mb-4" style={{ fontSize: '40px', fontWeight: 400, letterSpacing: '-0.03em', lineHeight: 1.15 }}>End to End Journey Mapping</h3>
                 <p className="text-slate-600 mb-6 flex-grow">
-                  Mapping out end-to-end service blueprints to identify friction points across both digital touchpoints and operational processes, delivering a unified customer journey.
+                  Visualising the full customer journey to uncover core friction points, build cross-team alignment, and turn user insights into winning CRO experiments.
                 </p>
                 <div className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 cursor-pointer group" onClick={() => setActiveCaseStudy("placeholder-3")}>
                   Read more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
