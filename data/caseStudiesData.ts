@@ -18,12 +18,17 @@ export const caseStudiesData = [
   {
     id: 2,
     slug: "placeholder-2",
-    subtitle: "",
-    title: "Data-Driven Design",
-    summary: "Coming Soon",
+    subtitle: "Data-Driven Design",
+    title: "Basket Redesign",
+    summary: "Following a platform migration, I led the redesign of a legacy basket page sitting at a ~50% conversion rate into delivery. Combining Lean UX discovery, AI-accelerated user research, and quantitative analytics, I aligned cross-functional squads and senior leadership around a data-backed experience built to drive onward progression and revenue.",
     image: "/images/LPD_Basket.jpg",
     imageAlt: "Data-Driven Design basket page redesign showcase",
-    highlights: ["Coming Soon"],
+    highlights: [
+      "Targeted a ~50% basket-to-delivery conversion gap following platform migration",
+      "Synthesized Contentsquare analytics, Maze AI research, and cross-functional squad teardowns",
+      "Defined a clear design north star through Lean UX problem framing and UX critiques",
+      "Aligned senior leadership around a validated, research-backed prototype direction"
+    ],
     pageContent: "Coming Soon"
   },
   {
