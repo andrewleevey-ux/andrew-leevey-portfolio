@@ -1,7 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ChevronLeft } from "lucide-react";
 import GuestCursor from "../../../components/GuestCursor";
+import CaseStudyBackLink from "../../../components/CaseStudyBackLink";
 import CaseStudyBottomNav from "../../../components/CaseStudyBottomNav";
 import { caseStudiesData } from "../../../data/caseStudiesData";
 import { notFound } from "next/navigation";
@@ -26,12 +25,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <div className="min-h-screen bg-slate-50 text-slate-900 font-sans text-lg leading-relaxed selection:bg-slate-200 dot-grid pb-24">
         <GuestCursor />
         <main className="max-w-3xl mx-auto px-6 pt-[10vh] pb-[15vh]">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[10vh]"
-          >
-            <ChevronLeft size={16} /> Back
-          </Link>
+          <CaseStudyBackLink className="mb-[10vh]" />
           <h1 className="text-5xl md:text-6xl font-normal text-slate-900 text-center mb-16" style={{ letterSpacing: "-0.03em", lineHeight: 1.15 }}>
             {data.title}
           </h1>
@@ -51,12 +45,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <GuestCursor />
 
       <main className="max-w-3xl mx-auto px-6 pt-[10vh] pb-[15vh]">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors mb-[4vh]"
-        >
-          <ChevronLeft size={16} /> Back
-        </Link>
+        <CaseStudyBackLink className="mb-[4vh]" />
 
         <Image
           src="/images/CRO_casestudy.jpg"
