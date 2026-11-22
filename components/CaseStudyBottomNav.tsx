@@ -1,9 +1,15 @@
 "use client";
 
-import Link from "next/link";
-import { ChevronLeft, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import CaseStudyBackLink, { DEFAULT_CASE_STUDY_BACK_HREF } from "./CaseStudyBackLink";
 
-export default function CaseStudyBottomNav() {
+interface CaseStudyBottomNavProps {
+  backHref?: string;
+}
+
+export default function CaseStudyBottomNav({
+  backHref = DEFAULT_CASE_STUDY_BACK_HREF,
+}: CaseStudyBottomNavProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -13,12 +19,7 @@ export default function CaseStudyBottomNav() {
       aria-label="Case study navigation"
       className="flex items-center justify-between mt-16 mb-8 pt-8 border-t border-slate-200"
     >
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full pr-4 pl-3 py-2 text-sm font-medium hover:bg-slate-50 transition-colors"
-      >
-        <ChevronLeft size={16} /> Back
-      </Link>
+      <CaseStudyBackLink href={backHref} />
 
       <button
         type="button"
