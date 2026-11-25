@@ -17,69 +17,27 @@ const archivoBlack = Archivo_Black({
   weight: "400",
 });
 
-export interface TextNode {
-  text: string;
-  isUnderlined?: boolean;
-}
+export const ABOUT_STATEMENT =
+  "I’m a Lead Product Designer. My job is to move the needle. I do that by reading complex product challenges, weighing commercial risks and opportunities, shaping clear design solutions, and executing them to manage outcomes.";
 
-export const WORDS: TextNode[] = [
-  { text: "I" },
-  { text: "am" },
-  { text: "a" },
-  { text: "lead", isUnderlined: true },
-  { text: "level", isUnderlined: true },
-  { text: "product" },
-  { text: "Designer" },
-  { text: "who" },
-  { text: "operates" },
-  { text: "as" },
-  { text: "a" },
-  { text: "commercial", isUnderlined: true },
-  { text: "advisor.", isUnderlined: true },
-  { text: "I" },
-  { text: "focus" },
-  { text: "on" },
-  { text: "translating" },
-  { text: "complex" },
-  { text: "business" },
-  { text: "logic" },
-  { text: "into" },
-  { text: "simple,", isUnderlined: true },
-  { text: "frictionless" },
-  { text: "user", isUnderlined: true },
-  { text: "journeys", isUnderlined: true },
-  { text: "that" },
-  { text: "directly" },
-  { text: "improve" },
-  { text: "conversion" },
-  { text: "and" },
-  { text: "retention." },
-];
+export const WORDS: string[] = ABOUT_STATEMENT.split(" ");
 
 interface WordProps {
   children: string;
   progress: MotionValue<number>;
   range: [number, number];
-  isUnderlined?: boolean;
 }
 
-function Word({ children, progress, range, isUnderlined }: WordProps) {
+function Word({ children, progress, range }: WordProps) {
   const shouldReduceMotion = useReducedMotion();
   const color = useTransform(progress, range, ["#d1d5db", "#000000"]);
-  const scaleX = useTransform(progress, range, [0, 1]);
 
   return (
     <motion.span
       style={{ color: shouldReduceMotion ? "#000000" : color }}
-      className={`text-gray-300${isUnderlined ? " relative inline-block" : ""}`}
+      className="text-gray-300"
     >
       {children}
-      {isUnderlined && (
-        <motion.span
-          style={{ scaleX: shouldReduceMotion ? 1 : scaleX }}
-          className="absolute left-0 -bottom-1 w-full h-[4px] bg-[#36C5F0] origin-left"
-        />
-      )}
     </motion.span>
   );
 }
@@ -112,17 +70,16 @@ export default function AboutMeSection() {
           ref={containerRef}
           className="flex flex-wrap justify-center gap-x-3 md:gap-x-4 gap-y-1 md:gap-y-2 text-3xl md:text-5xl font-medium text-center max-w-4xl leading-tight"
         >
-          {WORDS.map((node, i) => {
+          {WORDS.map((word, i) => {
             const start = i / WORDS.length;
             const end = start + 1 / WORDS.length;
             return (
               <Word
-                key={`${node.text}-${i}`}
+                key={`${word}-${i}`}
                 progress={scrollYProgress}
                 range={[start, end]}
-                isUnderlined={node.isUnderlined}
               >
-                {node.text}
+                {word}
               </Word>
             );
           })}
