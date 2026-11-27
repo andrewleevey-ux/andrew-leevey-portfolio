@@ -80,7 +80,11 @@ export default function CaseStudyModal({ activeCaseStudy, onClose }: CaseStudyMo
           {/* Bottom Action Bar */}
           <div className="flex gap-4 mt-8 pt-6 border-t border-slate-100">
             <Link
-              href={`/case-studies/${activeCaseStudy}`}
+              href={
+                activeCaseStudy === "placeholder-3"
+                  ? "/work/phase-map"
+                  : `/case-studies/${activeCaseStudy}`
+              }
               onClick={onClose}
               className="bg-slate-900 text-white rounded-full px-6 py-3 font-medium hover:bg-slate-800 transition-colors"
             >
